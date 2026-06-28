@@ -3327,3 +3327,63 @@ input, select, textarea {
 			}
 
 		}
+
+
+/* ==========================================
+   Certificates page only - Estilo Mejorado
+========================================== */
+
+/* 1. Suavizamos las esquinas y añadimos profundidad al recuadro completo */
+.certificate-tiles article {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy sutil por defecto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. Efecto de elevación (flotar) al pasar el mouse */
+.certificate-tiles article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al interactuar */
+}
+
+/* 3. Ajuste del fondo y espacio para que el logo respire */
+.certificate-tiles article .image {
+    height: 240px; /* Un poco más de altura */
+    background: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px; /* Más espacio para que los logos no se sientan apretados contra los bordes */
+}
+
+/* 4. Estilo del logo con una animación más natural */
+.certificate-tiles article .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Animación elástica y fluida */
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.08)); /* Da un poco de volumen al logo mismo */
+}
+
+/* 5. Zoom suave al logo al pasar el mouse */
+.certificate-tiles article:hover .image img {
+    transform: scale(1.08);
+}
+
+/* 6. Hacer que todo el recuadro sea un enlace clickeable */
+.certificate-tiles article {
+    position: relative; /* Asegura que la capa invisible no se salga de la tarjeta */
+}
+
+.certificate-tiles article a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10; /* Coloca la capa invisible por encima de la imagen y el fondo */
+}
