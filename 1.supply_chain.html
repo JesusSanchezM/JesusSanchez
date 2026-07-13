@@ -87,7 +87,7 @@
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 75%; /* relación de aspecto 4:3 */
+            padding-bottom: 75%; /* 4:3 aspect ratio */
         }
         .tableauPlaceholder object {
             position: absolute;
@@ -121,105 +121,105 @@
         <div id="main">
             <div class="inner">
 
-                <!-- Encabezado del proyecto -->
+                <!-- Project Header -->
                 <div class="project-header">
                     <h1>Supply Chain Intelligence</h1>
                     <p class="subtitle">Connecting customer behavior, inventory criticality, and economic impact for strategic decision-making</p>
                 </div>
 
-                <!-- Contexto / Problema de negocio -->
+                <!-- Context / Business Problem -->
                 <div class="section-block">
-                    <h3>📌 Contexto</h3>
+                    <h3>📌 Context</h3>
                     <p>
-                        Una empresa de retail con operaciones internacionales necesitaba entender cómo el comportamiento de sus clientes se relaciona con la estructura de inventario y el impacto económico. El equipo de Supply Chain quería identificar <strong>qué productos son críticos para los ingresos</strong>, <strong>qué segmentos de clientes dependen de ellos</strong>, y <strong>qué riesgos de inventario amenazan la estabilidad financiera</strong>.
+                        An international retail company needed to understand how customer behavior relates to inventory structure and economic impact. The Supply Chain team wanted to identify <strong>which products are critical to revenue</strong>, <strong>which customer segments depend on them</strong>, and <strong>what inventory risks threaten financial stability</strong>.
                     </p>
                     <div class="highlight-box">
-                        <strong>Preguntas de negocio:</strong> ¿Quiénes son nuestros clientes más valiosos? ¿Qué productos (SKUs) son económicamente críticos? ¿Cómo se concentran los ingresos en el inventario? ¿Qué riesgos de inventario amenazan los ingresos?
+                        <strong>Business questions:</strong> Who are our most valuable customers? Which SKUs are economically critical? How is revenue concentrated across inventory? What inventory risks threaten revenue?
                     </div>
                 </div>
 
-                <!-- Objetivo -->
+                <!-- Objective -->
                 <div class="section-block">
-                    <h3>🎯 Objetivo</h3>
+                    <h3>🎯 Objective</h3>
                     <ul>
-                        <li>Segmentar a los clientes por su valor a través de análisis RFM y clustering.</li>
-                        <li>Identificar el inventario crítico mediante análisis ABC.</li>
-                        <li>Medir la concentración de ingresos y el riesgo de exposición.</li>
-                        <li>Conectar los segmentos de clientes con la dependencia de inventario.</li>
-                        <li>Traducir los insights en recomendaciones estratégicas y operativas.</li>
+                        <li>Segment customers by value using RFM analysis and clustering.</li>
+                        <li>Identify critical inventory through ABC analysis.</li>
+                        <li>Measure revenue concentration and exposure risk.</li>
+                        <li>Connect customer segments with inventory dependency.</li>
+                        <li>Translate insights into strategic and operational recommendations.</li>
                     </ul>
                 </div>
 
-                <!-- Metodología (alto nivel) -->
+                <!-- Methodology (high-level) -->
                 <div class="section-block">
-                    <h3>🛠️ Metodología</h3>
+                    <h3>🛠️ Methodology</h3>
                     <div class="grid-2col">
                         <div>
-                            <h4>Análisis de clientes</h4>
+                            <h4>Customer Analysis</h4>
                             <ul>
-                                <li>Cálculo de métricas RFM (Recencia, Frecuencia, Monto).</li>
-                                <li>Segmentación basada en reglas de negocio: Champions, Big Spenders, Core, At Risk.</li>
-                                <li>Validación con K-Means clustering (Silhouette Score: 0.367).</li>
-                                <li>Consistencia de segmentos entre 2010 y 2011.</li>
+                                <li>RFM metric calculation (Recency, Frequency, Monetary).</li>
+                                <li>Rule-based segmentation: Champions, Big Spenders, Core, At Risk.</li>
+                                <li>Validation with K-Means clustering (Silhouette Score: 0.367).</li>
+                                <li>Segment consistency between 2010 and 2011.</li>
                             </ul>
                             <div class="insight-image">
                                 <img src="images/1.1. 3D RFM.png" alt="RFM 3D Segmentation" onerror="this.style.display='none'"/>
-                                <p class="caption">Figura 1: Visualización 3D de segmentos RFM</p>
+                                <p class="caption">Figure 1: 3D visualization of RFM segments</p>
                             </div>
                         </div>
                         <div>
-                            <h4>Análisis de inventario e impacto</h4>
+                            <h4>Inventory & Impact Analysis</h4>
                             <ul>
-                                <li>Clasificación ABC de SKUs por contribución a ingresos (A, B, C).</li>
-                                <li>Análisis de persistencia de SKUs (2010 → 2011).</li>
-                                <li>Cruce de segmentos de clientes con clases ABC.</li>
-                                <li>Medición de dependencia de inventario por segmento.</li>
+                                <li>ABC classification of SKUs by revenue contribution (A, B, C).</li>
+                                <li>SKU persistence analysis (2010 → 2011).</li>
+                                <li>Cross-tabulation of customer segments with ABC classes.</li>
+                                <li>Measurement of inventory dependency per segment.</li>
                             </ul>
                             <div class="insight-image">
                                 <img src="images/1.2. Revenue Dependencies.png" alt="Revenue Dependency by Segment & ABC" onerror="this.style.display='none'"/>
-                                <p class="caption">Figura 2: Contribución de ingresos por segmento y clase ABC (2010-2011)</p>
+                                <p class="caption">Figure 2: Revenue contribution by segment and ABC class (2010-2011)</p>
                             </div>
                         </div>
                     </div>
                     <p style="margin-top:1rem;">
-                        <strong>Resultado clave:</strong> Se identificó que el <strong>23% de los SKUs (Clase A)</strong> genera el <strong>80% de los ingresos</strong>, y que los segmentos de mayor valor (Champions y Big Spenders) dependen fuertemente de este inventario crítico.
+                        <strong>Key finding:</strong> <strong>23% of SKUs (Class A)</strong> generate <strong>80% of total revenue</strong>, and the highest-value segments (Champions and Big Spenders) rely heavily on this critical inventory.
                     </p>
                 </div>
 
-                <!-- Insights de negocio -->
+                <!-- Business Insights -->
                 <div class="section-block">
-                    <h3>💡 Insights de negocio</h3>
+                    <h3>💡 Business Insights</h3>
                     <div class="insight-grid">
                         <div class="highlight-box">
-                            <h4>Concentración de ingresos</h4>
-                            <p>El <strong>23% de los SKUs (Clase A)</strong> genera el <strong>80% de los ingresos totales</strong>. Una interrupción en estos productos afectaría directamente a los ingresos.</p>
+                            <h4>Revenue concentration</h4>
+                            <p><strong>23% of SKUs (Class A)</strong> generate <strong>80% of total revenue</strong>. A disruption in these products would directly affect revenue.</p>
                         </div>
                         <div class="highlight-box">
-                            <h4>Dependencia de segmentos VIP</h4>
-                            <p>Los <strong>Champions (VIP)</strong> y <strong>Big Spenders</strong> dependen en un <strong>72%</strong> de inventario Clase A. Su fidelidad está ligada a la disponibilidad de estos productos.</p>
+                            <h4>VIP segment dependency</h4>
+                            <p><strong>Champions (VIP)</strong> and <strong>Big Spenders</strong> rely on <strong>72%</strong> Class A inventory. Their loyalty is tied to the availability of these products.</p>
                         </div>
                         <div class="highlight-box">
-                            <h4>Persistencia de SKUs</h4>
-                            <p>El <strong>84%</strong> de los SKUs Clase A persistieron de 2010 a 2011, vs solo el <strong>60%</strong> de Clase C. El portafolio crítico es estable.</p>
+                            <h4>SKU persistence</h4>
+                            <p><strong>84%</strong> of Class A SKUs persisted from 2010 to 2011, vs only <strong>60%</strong> of Class C. The critical portfolio is stable.</p>
                         </div>
                         <div class="highlight-box">
-                            <h4>Clientes en riesgo</h4>
-                            <p>Los clientes <strong>"At Risk"</strong> representan el <strong>40%</strong> de la base, pero solo el <strong>15%</strong> de los ingresos. Dependen más de inventario Clase B/C.</p>
+                            <h4>At‑Risk customers</h4>
+                            <p><strong>"At Risk"</strong> customers represent <strong>40%</strong> of the base, but only <strong>15%</strong> of revenue. They rely more on Class B/C inventory.</p>
                         </div>
                     </div>
 
-                    <!-- Imagen adicional: Inventory Dependency -->
+                    <!-- Additional image: Inventory Dependency -->
                     <div class="insight-image">
                         <img src="images/1.3 Inventory dependencies.png" alt="Inventory Dependency by Segment" onerror="this.style.display='none'"/>
-                        <p class="caption">Figura 3: Dependencia de inventario por segmento (transacciones, 2010-2011)</p>
+                        <p class="caption">Figure 3: Inventory dependency by segment (transactions, 2010-2011)</p>
                     </div>
                 </div>
 
-                <!-- Dashboard embebido de Tableau -->
+                <!-- Embedded Tableau Dashboard -->
                 <div class="section-block">
-                    <h3>📊 Dashboard interactivo</h3>
+                    <h3>📊 Interactive Dashboard</h3>
                     <p>
-                        El dashboard permite explorar la relación entre segmentos de clientes, clases de inventario y concentración de ingresos. Incluye filtros por año, segmento y categoría de producto para un análisis dinámico.
+                        The dashboard allows exploration of the relationship between customer segments, inventory classes, and revenue concentration. It includes filters by year, segment, and product category for dynamic analysis.
                     </p>
                     <div class="dashboard-container">
                         <div class='tableauPlaceholder' id='viz1768353192539' style='position: relative'>
@@ -247,27 +247,27 @@
                         </script>
                     </div>
                     <p style="font-size:0.85rem; color:#888; text-align:center; margin-top:0.5rem;">
-                        Fuente: Datos transaccionales de retail (2010-2011) · Ajuste por inflación 3.9%
+                        Source: Retail transactional data (2010-2011) · Adjusted for 3.9% inflation
                     </p>
                 </div>
 
-                <!-- Recomendaciones ejecutivas -->
+                <!-- Executive Recommendations -->
                 <div class="section-block">
-                    <h3>📌 Recomendaciones ejecutivas</h3>
+                    <h3>📌 Executive Recommendations</h3>
                     <ul>
-                        <li><strong>Priorizar disponibilidad de SKUs Clase A:</strong> Asegurar stock de seguridad para productos críticos, especialmente los que compran los segmentos VIP.</li>
-                        <li><strong>Alinear políticas de inventario con valor del cliente:</strong> Los Champions requieren disponibilidad garantizada; considerar acuerdos de nivel de servicio diferenciados.</li>
-                        <li><strong>Stress-testing de riesgos:</strong> Simular escenarios de desabasto en Clase A y evaluar impacto en ingresos por segmento.</li>
-                        <li><strong>Revisar estrategia para clientes "At Risk":</strong> Campañas de reactivación enfocadas en productos B/C para aumentar su engagement sin comprometer inventario crítico.</li>
+                        <li><strong>Prioritize Class A SKU availability:</strong> Ensure safety stock for critical products, especially those bought by VIP segments.</li>
+                        <li><strong>Align inventory policies with customer value:</strong> Champions require guaranteed availability; consider differentiated service-level agreements.</li>
+                        <li><strong>Risk stress-testing:</strong> Simulate Class A stockout scenarios and evaluate revenue impact per segment.</li>
+                        <li><strong>Revisit strategy for "At Risk" customers:</strong> Reactivation campaigns focused on B/C products to increase engagement without compromising critical inventory.</li>
                     </ul>
                     <div class="highlight-box" style="margin-top:1rem;">
-                        <strong>Impacto estimado:</strong> La implementación de estas recomendaciones permitiría reducir el riesgo de desabasto en Clase A en un <strong>15%</strong>, protegiendo <strong>$1.2M USD</strong> en ingresos anuales de los segmentos de mayor valor.
+                        <strong>Estimated impact:</strong> Implementation of these recommendations would reduce Class A stockout risk by <strong>15%</strong>, protecting <strong>$1.2M USD</strong> in annual revenue from the highest-value segments.
                     </div>
                 </div>
 
-                <!-- Tecnologías utilizadas -->
+                <!-- Technologies Used -->
                 <div class="section-block">
-                    <h3>⚙️ Tecnologías</h3>
+                    <h3>⚙️ Technologies</h3>
                     <p>
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Pandas</span>
@@ -282,13 +282,13 @@
                     </p>
                 </div>
 
-                <!-- Enlace a GitHub -->
+                <!-- GitHub Link -->
                 <div class="section-block" style="text-align:center; margin: 3rem 0;">
                     <ul class="actions fit">
                         <li><a href="https://github.com/JesusSanchezM/1.-Supply-Chain-Intelligence" target="_blank" class="button primary icon brands fa-github">View full project on GitHub</a></li>
                     </ul>
                     <p style="font-size:0.9rem; color:#666;">
-                        Repositorio con notebooks de análisis (EDA, RFM, ABC), datos procesados, y archivos del dashboard.
+                        Repository with analysis notebooks (EDA, RFM, ABC), processed data, and dashboard files.
                     </p>
                 </div>
 
