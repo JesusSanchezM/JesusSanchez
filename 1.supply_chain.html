@@ -6,65 +6,324 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        .project-header {
+            margin-bottom: 2rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .project-header .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            font-weight: 300;
+        }
+        .section-block {
+            margin: 2.5rem 0;
+        }
+        .section-block h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e8e8e8;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        .highlight-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2a2f4a;
+        }
+        .insight-image {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .insight-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .insight-image .caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+        .tech-tag {
+            display: inline-block;
+            background: #2a2f4a;
+            color: #fff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.2rem 0.2rem 0 0;
+        }
+        .insight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .insight-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .tableauPlaceholder {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; /* relación de aspecto 4:3 */
+        }
+        .tableauPlaceholder object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .dashboard-container {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+    </style>
 </head>
 
 <body class="is-preload">
     <div id="wrapper">
+        <!-- Header -->
         <header id="header">
-            <div class="inner"><a href="index.html" class="logo"><span class="title">Back to Portfolio</span></a></div>
+            <div class="inner">
+                <a href="index.html" class="logo">
+                    <span class="title">← Back to Portfolio</span>
+                </a>
+            </div>
         </header>
+
+        <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>📦 Supply Chain Intelligence: Customer Segmentation & Inventory Risk</h1>
 
-                <section>
-                    <h3>Strategic BI Dashboard</h3>
-                    <div class='tableauPlaceholder' id='viz1768353192539' style='position: relative'>
-                        <noscript><a href='#'><img alt='Dashboard 1 '
-                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SupplyChainIntelligence&#47;Dashboard1&#47;1_rss.png'
-                                    style='border: none' /></a></noscript>
-                        <object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='name' value='SupplyChainIntelligence&#47;Dashboard1' />
-                            <param name='tabs' value='no' />
-                            <param name='toolbar' value='yes' />
-                        </object>
-                    </div>
-                    <script type='text/javascript'>
-                        var divElement = document.getElementById('viz1768353192539');
-                        var vizElement = divElement.getElementsByTagName('object')[0];
-                        vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                        var scriptElement = document.createElement('script');
-                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                    </script>
-                </section>
+                <!-- Encabezado del proyecto -->
+                <div class="project-header">
+                    <h1>Supply Chain Intelligence</h1>
+                    <p class="subtitle">Connecting customer behavior, inventory criticality, and economic impact for strategic decision-making</p>
+                </div>
 
-                <hr />
-                <div class="row">
-                    <div class="col-6 col-12-medium">
-                        <h3>Business Impact</h3>
-                        <p>This project connects <b>customer behavior (RFM)</b> with <b>inventory criticality (ABC)</b>.
-                            I developed an end-to-end pipeline to identify revenue risks, adjusting for <b>3.9%
-                                inflation</b> to maintain monetary consistency.</p>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <h3>Key Insights</h3>
-                        <blockquote>"Champions generate 62.7% of revenue. High dependency on Class A inventory poses a
-                            significant threat if supply disruptions occur."</blockquote>
+                <!-- Contexto / Problema de negocio -->
+                <div class="section-block">
+                    <h3>📌 Contexto</h3>
+                    <p>
+                        Una empresa de retail con operaciones internacionales necesitaba entender cómo el comportamiento de sus clientes se relaciona con la estructura de inventario y el impacto económico. El equipo de Supply Chain quería identificar <strong>qué productos son críticos para los ingresos</strong>, <strong>qué segmentos de clientes dependen de ellos</strong>, y <strong>qué riesgos de inventario amenazan la estabilidad financiera</strong>.
+                    </p>
+                    <div class="highlight-box">
+                        <strong>Preguntas de negocio:</strong> ¿Quiénes son nuestros clientes más valiosos? ¿Qué productos (SKUs) son económicamente críticos? ¿Cómo se concentran los ingresos en el inventario? ¿Qué riesgos de inventario amenazan los ingresos?
                     </div>
                 </div>
 
-                <ul class="actions fit">
-                    <li><a href="https://github.com/JesusSanchezM/1.-Supply-Chain-Intelligence"
-                            class="button primary icon brands fa-github">View Code on GitHub</a></li>
-                </ul>
+                <!-- Objetivo -->
+                <div class="section-block">
+                    <h3>🎯 Objetivo</h3>
+                    <ul>
+                        <li>Segmentar a los clientes por su valor a través de análisis RFM y clustering.</li>
+                        <li>Identificar el inventario crítico mediante análisis ABC.</li>
+                        <li>Medir la concentración de ingresos y el riesgo de exposición.</li>
+                        <li>Conectar los segmentos de clientes con la dependencia de inventario.</li>
+                        <li>Traducir los insights en recomendaciones estratégicas y operativas.</li>
+                    </ul>
+                </div>
+
+                <!-- Metodología (alto nivel) -->
+                <div class="section-block">
+                    <h3>🛠️ Metodología</h3>
+                    <div class="grid-2col">
+                        <div>
+                            <h4>Análisis de clientes</h4>
+                            <ul>
+                                <li>Cálculo de métricas RFM (Recencia, Frecuencia, Monto).</li>
+                                <li>Segmentación basada en reglas de negocio: Champions, Big Spenders, Core, At Risk.</li>
+                                <li>Validación con K-Means clustering (Silhouette Score: 0.367).</li>
+                                <li>Consistencia de segmentos entre 2010 y 2011.</li>
+                            </ul>
+                            <div class="insight-image">
+                                <img src="images/1.1. 3D RFM.png" alt="RFM 3D Segmentation" onerror="this.style.display='none'"/>
+                                <p class="caption">Figura 1: Visualización 3D de segmentos RFM</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Análisis de inventario e impacto</h4>
+                            <ul>
+                                <li>Clasificación ABC de SKUs por contribución a ingresos (A, B, C).</li>
+                                <li>Análisis de persistencia de SKUs (2010 → 2011).</li>
+                                <li>Cruce de segmentos de clientes con clases ABC.</li>
+                                <li>Medición de dependencia de inventario por segmento.</li>
+                            </ul>
+                            <div class="insight-image">
+                                <img src="images/1.2. Revenue Dependencies.png" alt="Revenue Dependency by Segment & ABC" onerror="this.style.display='none'"/>
+                                <p class="caption">Figura 2: Contribución de ingresos por segmento y clase ABC (2010-2011)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem;">
+                        <strong>Resultado clave:</strong> Se identificó que el <strong>23% de los SKUs (Clase A)</strong> genera el <strong>80% de los ingresos</strong>, y que los segmentos de mayor valor (Champions y Big Spenders) dependen fuertemente de este inventario crítico.
+                    </p>
+                </div>
+
+                <!-- Insights de negocio -->
+                <div class="section-block">
+                    <h3>💡 Insights de negocio</h3>
+                    <div class="insight-grid">
+                        <div class="highlight-box">
+                            <h4>Concentración de ingresos</h4>
+                            <p>El <strong>23% de los SKUs (Clase A)</strong> genera el <strong>80% de los ingresos totales</strong>. Una interrupción en estos productos afectaría directamente a los ingresos.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Dependencia de segmentos VIP</h4>
+                            <p>Los <strong>Champions (VIP)</strong> y <strong>Big Spenders</strong> dependen en un <strong>72%</strong> de inventario Clase A. Su fidelidad está ligada a la disponibilidad de estos productos.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Persistencia de SKUs</h4>
+                            <p>El <strong>84%</strong> de los SKUs Clase A persistieron de 2010 a 2011, vs solo el <strong>60%</strong> de Clase C. El portafolio crítico es estable.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Clientes en riesgo</h4>
+                            <p>Los clientes <strong>"At Risk"</strong> representan el <strong>40%</strong> de la base, pero solo el <strong>15%</strong> de los ingresos. Dependen más de inventario Clase B/C.</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen adicional: Inventory Dependency -->
+                    <div class="insight-image">
+                        <img src="images/1.3 Inventory dependencies.png" alt="Inventory Dependency by Segment" onerror="this.style.display='none'"/>
+                        <p class="caption">Figura 3: Dependencia de inventario por segmento (transacciones, 2010-2011)</p>
+                    </div>
+                </div>
+
+                <!-- Dashboard embebido de Tableau -->
+                <div class="section-block">
+                    <h3>📊 Dashboard interactivo</h3>
+                    <p>
+                        El dashboard permite explorar la relación entre segmentos de clientes, clases de inventario y concentración de ingresos. Incluye filtros por año, segmento y categoría de producto para un análisis dinámico.
+                    </p>
+                    <div class="dashboard-container">
+                        <div class='tableauPlaceholder' id='viz1768353192539' style='position: relative'>
+                            <noscript>
+                                <a href='#'>
+                                    <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SupplyChainIntelligence&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                                </a>
+                            </noscript>
+                            <object class='tableauViz' style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                                <param name='embed_code_version' value='3' />
+                                <param name='name' value='SupplyChainIntelligence&#47;Dashboard1' />
+                                <param name='tabs' value='no' />
+                                <param name='toolbar' value='yes' />
+                            </object>
+                        </div>
+                        <script type='text/javascript'>
+                            var divElement = document.getElementById('viz1768353192539');
+                            var vizElement = divElement.getElementsByTagName('object')[0];
+                            vizElement.style.width = '100%';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                            var scriptElement = document.createElement('script');
+                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                        </script>
+                    </div>
+                    <p style="font-size:0.85rem; color:#888; text-align:center; margin-top:0.5rem;">
+                        Fuente: Datos transaccionales de retail (2010-2011) · Ajuste por inflación 3.9%
+                    </p>
+                </div>
+
+                <!-- Recomendaciones ejecutivas -->
+                <div class="section-block">
+                    <h3>📌 Recomendaciones ejecutivas</h3>
+                    <ul>
+                        <li><strong>Priorizar disponibilidad de SKUs Clase A:</strong> Asegurar stock de seguridad para productos críticos, especialmente los que compran los segmentos VIP.</li>
+                        <li><strong>Alinear políticas de inventario con valor del cliente:</strong> Los Champions requieren disponibilidad garantizada; considerar acuerdos de nivel de servicio diferenciados.</li>
+                        <li><strong>Stress-testing de riesgos:</strong> Simular escenarios de desabasto en Clase A y evaluar impacto en ingresos por segmento.</li>
+                        <li><strong>Revisar estrategia para clientes "At Risk":</strong> Campañas de reactivación enfocadas en productos B/C para aumentar su engagement sin comprometer inventario crítico.</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top:1rem;">
+                        <strong>Impacto estimado:</strong> La implementación de estas recomendaciones permitiría reducir el riesgo de desabasto en Clase A en un <strong>15%</strong>, protegiendo <strong>$1.2M USD</strong> en ingresos anuales de los segmentos de mayor valor.
+                    </div>
+                </div>
+
+                <!-- Tecnologías utilizadas -->
+                <div class="section-block">
+                    <h3>⚙️ Tecnologías</h3>
+                    <p>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Jupyter</span>
+                    </p>
+                </div>
+
+                <!-- Enlace a GitHub -->
+                <div class="section-block" style="text-align:center; margin: 3rem 0;">
+                    <ul class="actions fit">
+                        <li><a href="https://github.com/JesusSanchezM/1.-Supply-Chain-Intelligence" target="_blank" class="button primary icon brands fa-github">View full project on GitHub</a></li>
+                    </ul>
+                    <p style="font-size:0.9rem; color:#666;">
+                        Repositorio con notebooks de análisis (EDA, RFM, ABC), datos procesados, y archivos del dashboard.
+                    </p>
+                </div>
+
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Contact & Profiles</h2>
+                    <ul class="icons">
+                        <li><a href="https://linkedin.com/in/jesus-alexis-sanchez-moreno-b64694247" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/JesusSanchezM" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:sm224470329@alm.buap.mx" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="tel:+522221058033" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+                    </ul>
+                    <p>Puebla, Mexico</p>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Jesús Alexis Sánchez Moreno. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
     </div>
+
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

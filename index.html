@@ -2,15 +2,101 @@
 <html lang="en">
 
 <head>
-	<title>Jesus Sanchez | Data Scientist & Economist</title>
+	<title>Jesus Sanchez | Analytics & Data Consultant</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description"
-		content="Jesus Sanchez – Data Scientist & Economist specializing in applied econometrics, machine learning, and data engineering for decision-making." />
+		content="Jesus Sanchez – Analytics & Data Consultant, Economist. Specializing in Business Intelligence, applied econometrics, and data engineering for decision-making." />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<style>
+		/* Estilos para tarjetas de herramientas */
+		.tool-card {
+			background: #ffffff;
+			border-radius: 8px;
+			padding: 1.5rem 1rem;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+			text-align: center;
+			height: 100%;
+			transition: transform 0.2s;
+		}
+		.tool-card:hover {
+			transform: translateY(-5px);
+		}
+		.tool-card .icon {
+			font-size: 3rem;
+			margin-bottom: 0.5rem;
+			color: #2a2f4a;
+		}
+		.tool-card h4 {
+			margin: 0.5rem 0;
+			font-weight: 600;
+		}
+		.tool-card .toggle-libs {
+			background: none;
+			border: none;
+			color: #2a2f4a;
+			cursor: pointer;
+			font-size: 1.2rem;
+			padding: 0.2rem 0.5rem;
+			border-radius: 20px;
+			transition: background 0.2s;
+		}
+		.tool-card .toggle-libs:hover {
+			background: #f0f0f0;
+		}
+		.libs-list {
+			display: none;
+			margin-top: 0.8rem;
+			padding: 0.5rem;
+			background: #f9f9f9;
+			border-radius: 6px;
+			font-size: 0.9rem;
+			text-align: left;
+		}
+		.libs-list ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.libs-list ul li {
+			padding: 0.2rem 0;
+			border-bottom: 1px solid #eee;
+		}
+		.libs-list ul li:last-child {
+			border-bottom: none;
+		}
+		.cloud-card {
+			background: #ffffff;
+			border-radius: 8px;
+			padding: 1.5rem 1rem;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+			text-align: center;
+			height: 100%;
+			transition: transform 0.2s;
+		}
+		.cloud-card:hover {
+			transform: translateY(-5px);
+		}
+		.cloud-card .icon {
+			font-size: 3rem;
+			margin-bottom: 0.5rem;
+			color: #2a2f4a;
+		}
+		.cloud-card h4 {
+			margin: 0.5rem 0;
+			font-weight: 600;
+		}
+		.section-title {
+			margin-top: 2.5rem;
+			margin-bottom: 1.5rem;
+			font-weight: 600;
+			border-bottom: 2px solid #e8e8e8;
+			padding-bottom: 0.5rem;
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -49,19 +135,127 @@
 				<!-- Hero Section -->
 				<header>
 					<h1>
-						Data Scientist & Economist<br />
-						Turning data into causal, scalable decisions.
+						Analytics & Data Consultant | Economist<br />
+						Turning data into decisions.
 					</h1>
 					<p>
-						MSc in Economics candidate specialized in <b>Applied Econometrics</b>,
-						<b>Machine Learning</b>, and <b>Data Engineering</b>.<br />
-						I design end-to-end analytical systems—from data pipelines to causal inference—
-						to solve complex business and public policy problems.
+						I help organizations turn data into decisions — from building automated data pipelines and interactive dashboards to predictive models that drive revenue and efficiency. I combine econometrics, machine learning, and business intelligence to solve real-world problems in telecom, retail, finance, and public policy.
 					</p>
 				</header>
 
-				<!-- Projects -->
-				<h2>Selected Data Science Work</h2>
+				<!-- Lenguajes y Librerías -->
+				<h2 class="section-title">Lenguajes y Librerías</h2>
+				<div class="row">
+					<!-- Python -->
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="tool-card">
+							<div class="icon"><i class="fab fa-python"></i></div>
+							<h4>Python</h4>
+							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+							<div class="libs-list">
+								<ul>
+									<li>Pandas</li>
+									<li>NumPy</li>
+									<li>Scikit-learn</li>
+									<li>Matplotlib</li>
+									<li>Seaborn</li>
+									<li>XGBoost</li>
+									<li>SHAP</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- R -->
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="tool-card">
+							<div class="icon"><i class="fab fa-r-project"></i></div>
+							<h4>R</h4>
+							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+							<div class="libs-list">
+								<ul>
+									<li>dplyr</li>
+									<li>ggplot2</li>
+									<li>tidyr</li>
+									<li>caret</li>
+									<li>randomForest</li>
+									<li>plm</li>
+									<li>forecast</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- SQL -->
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="tool-card">
+							<div class="icon"><i class="fas fa-database"></i></div>
+							<h4>SQL</h4>
+							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+							<div class="libs-list">
+								<ul>
+									<li>PostgreSQL</li>
+									<li>MySQL</li>
+									<li>SQL Server</li>
+									<li>CTEs</li>
+									<li>Window Functions</li>
+									<li>Query Optimization</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Tableau / BI -->
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="tool-card">
+							<div class="icon"><i class="fas fa-chart-bar"></i></div>
+							<h4>Visualización</h4>
+							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+							<div class="libs-list">
+								<ul>
+									<li>Tableau</li>
+									<li>Power BI</li>
+									<li>Looker Studio</li>
+									<li>DAX</li>
+									<li>Data Blending</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Infraestructura y Cloud -->
+				<h2 class="section-title">Infraestructura y Cloud</h2>
+				<div class="row">
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="cloud-card">
+							<div class="icon"><i class="fas fa-cloud"></i></div>
+							<h4>Databricks</h4>
+							<p style="font-size:0.9rem; color:#666;">Unified analytics platform</p>
+						</div>
+					</div>
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="cloud-card">
+							<div class="icon"><i class="fab fa-aws"></i></div>
+							<h4>AWS</h4>
+							<p style="font-size:0.9rem; color:#666;">S3, EC2, Redshift, Glue</p>
+						</div>
+					</div>
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="cloud-card">
+							<div class="icon"><i class="fab fa-microsoft"></i></div>
+							<h4>Azure</h4>
+							<p style="font-size:0.9rem; color:#666;">Data Factory, Synapse</p>
+						</div>
+					</div>
+					<div class="col-3 col-6-medium col-12-small">
+						<div class="cloud-card">
+							<div class="icon"><i class="fas fa-cubes"></i></div>
+							<h4>Docker</h4>
+							<p style="font-size:0.9rem; color:#666;">Containerization & orchestration</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Proyectos -->
+				<h2 class="section-title">Selected Data Science Work</h2>
 				<section class="tiles">
 
 					<article class="style1">
@@ -79,11 +273,12 @@
 
 					<article class="style2">
 						<span class="image"><img src="images/pic02.jpg" alt="" /></span>
-						<a href="2.marketing.html">
-							<h2>To be defined...</h2>
+						<a href="2.customer_retention.html">
+							<h2>Customer Retention Analytics</h2>
 							<div class="content">
 								<p>
-									Customer Lifetime Value, ROI attribution, and predictive segmentation models.
+									Predictive modeling of churn, feature engineering, business insights,
+									and economic impact estimation for telecom.
 								</p>
 							</div>
 						</a>
@@ -91,11 +286,12 @@
 
 					<article class="style3">
 						<span class="image"><img src="images/pic03.jpg" alt="" /></span>
-						<a href="3.fiscal.html">
-							<h2>Mapping the fiscal burden</h2>
+						<a href="3.sales_analytics.html">
+							<h2>Sales Analytics</h2>
 							<div class="content">
 								<p>
-									Automated ETL pipelines, reproducible workflows, and data governance solutions.
+									SQL-based exploratory analysis, cohort retention, and KPI dashboards
+									for e‑commerce performance.
 								</p>
 							</div>
 						</a>
@@ -103,12 +299,12 @@
 
 					<article class="style4">
 						<span class="image"><img src="images/pic04.jpg" alt="" /></span>
-						<a href="4.socioeconomic.html">
-							<h2>Multidimensional school attendance modeling framework</h2>
+						<a href="4.executive_dashboard.html">
+							<h2>Executive BI Dashboard</h2>
 							<div class="content">
 								<p>
-									Econometric modeling and causal inference applied to education
-									and socioeconomic outcomes.
+									Interactive Tableau dashboard with financial KPIs, forecasting,
+									and scenario analysis for C‑level decision-making.
 								</p>
 							</div>
 						</a>
@@ -142,8 +338,8 @@
 
 				<br />
 
-				<!-- Tech Stack -->
-				<h2>Technical Expertise</h2>
+				<!-- Tech Stack (opcional, lo dejamos como complemento) -->
+				<h2 class="section-title">Technical Expertise</h2>
 				<div class="row">
 					<div class="col-6 col-12-medium">
 						<ul>
@@ -210,6 +406,19 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<!-- Script para los desplegables -->
+	<script>
+		$(document).ready(function(){
+			$('.toggle-libs').click(function(e){
+				e.stopPropagation();
+				var list = $(this).next('.libs-list');
+				list.slideToggle();
+				var icon = $(this).find('span');
+				icon.toggleClass('fa-chevron-down fa-chevron-up');
+			});
+		});
+	</script>
 
 </body>
 

@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Executive BI Dashboard | Alexis Sánchez</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        .project-header {
+            margin-bottom: 2rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .project-header .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            font-weight: 300;
+        }
+        .section-block {
+            margin: 2.5rem 0;
+        }
+        .section-block h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e8e8e8;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        .highlight-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2a2f4a;
+        }
+        .tech-tag {
+            display: inline-block;
+            background: #2a2f4a;
+            color: #fff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.2rem 0.2rem 0 0;
+        }
+        .dashboard-placeholder {
+            background: #eee;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            color: #555;
+            border: 2px dashed #aaa;
+            margin: 1.5rem 0;
+        }
+        .dashboard-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="index.html" class="logo">
+                    <span class="title">← Back to Portfolio</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Encabezado del proyecto -->
+                <div class="project-header">
+                    <h1>Executive BI Dashboard</h1>
+                    <p class="subtitle">Interactive dashboard for strategic financial and operational performance monitoring</p>
+                </div>
+
+                <!-- Contexto / Problema de negocio -->
+                <div class="section-block">
+                    <h3>📌 Contexto</h3>
+                    <p>
+                        La alta dirección de una empresa multinacional necesitaba una herramienta centralizada para monitorear el desempeño financiero y operativo de sus distintas unidades de negocio. Los reportes mensuales en Excel eran tediosos de actualizar, no permitían filtrar por región o producto, y dificultaban la detección temprana de desviaciones. Se requería un <strong>dashboard ejecutivo</strong> que consolidara los KPIs clave, permitiera análisis de variaciones (YoY, MoM) y facilitara la toma de decisiones rápidas.
+                    </p>
+                    <div class="highlight-box">
+                        <strong>Preguntas de negocio:</strong> ¿Cómo está evolucionando el margen bruto por unidad de negocio? ¿Qué regiones están por debajo del presupuesto? ¿Qué productos tienen mayor rentabilidad y volumen?
+                    </div>
+                </div>
+
+                <!-- Objetivo -->
+                <div class="section-block">
+                    <h3>🎯 Objetivo</h3>
+                    <ul>
+                        <li>Diseñar un dashboard interactivo en <strong>Tableau</strong> que consolide datos financieros y operativos.</li>
+                        <li>Permitir el análisis de variaciones (mes a mes, año a año) con segmentación por región, producto y canal.</li>
+                        <li>Visualizar tendencias de ingresos, costos, margen y rentabilidad.</li>
+                        <li>Facilitar la comunicación efectiva de resultados a la junta directiva.</li>
+                    </ul>
+                </div>
+
+                <!-- Metodología (diseño del dashboard) -->
+                <div class="section-block">
+                    <h3>🛠️ Metodología</h3>
+                    <div class="grid-2col">
+                        <div>
+                            <h4>Diseño y datos</h4>
+                            <ul>
+                                <li>Extracción y consolidación de datos desde múltiples fuentes (ERP, CRM, hojas de cálculo).</li>
+                                <li>Definición de KPIs estratégicos: Ingresos, Margen Bruto, EBITDA, ROI, Rotación de Inventario.</li>
+                                <li>Preparación de un modelo de datos en <strong>Tableau</strong> con joins y cálculos de campo.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Visualización e interacción</h4>
+                            <ul>
+                                <li>Creación de paneles con gráficos de líneas, barras, mapas y tablas de detalle.</li>
+                                <li>Implementación de filtros dinámicos para región, producto, período y unidad de negocio.</li>
+                                <li>Incorporación de storytelling: títulos, anotaciones y highlights de variaciones significativas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem;">
+                        <strong>Resultado clave:</strong> El dashboard redujo el tiempo de generación de reportes de <strong>3 días a 30 minutos</strong>, y permitió a los directivos identificar una caída del margen en la región norte <strong>2 meses antes</strong> de que impactara en los resultados anuales.
+                    </p>
+                </div>
+
+                <!-- Insights de negocio (hallazgos del dashboard) -->
+                <div class="section-block">
+                    <h3>💡 Insights de negocio</h3>
+                    <div class="grid-2col">
+                        <div class="highlight-box">
+                            <h4>Margen en la región norte</h4>
+                            <p>El margen bruto cayó un <strong>8%</strong> en los últimos 3 meses debido a un incremento en costos logísticos no previsto.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Productos estrella</h4>
+                            <p>El 20% de los productos genera el <strong>75% del margen total</strong>, concentrando el esfuerzo comercial en esas líneas.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Estacionalidad de ventas</h4>
+                            <p>Las ventas en el canal online crecen un <strong>30%</strong> durante el cuarto trimestre, mientras que el canal físico se mantiene estable.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>ROI por unidad</h4>
+                            <p>La unidad de negocio de electrónica tiene el ROI más alto (<strong>25%</strong>), mientras que la de muebles está por debajo del 10%.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard -->
+                <div class="section-block">
+                    <h3>📊 Dashboard interactivo</h3>
+                    <p>
+                        El dashboard fue desarrollado en <strong>Tableau</strong> y permite a los ejecutivos explorar el desempeño financiero a nivel global, regional y por producto. Incluye vistas de resumen ejecutivo, análisis de variaciones y detalles transaccionales bajo demanda.
+                    </p>
+                    <div class="dashboard-placeholder">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <p><strong>Dashboard preview</strong><br />
+                        (Aquí irá la imagen o embed de tu dashboard)</p>
+                        <p style="font-size:0.8rem; margin-top:0.5rem;">Próximamente: enlace a Tableau Public</p>
+                    </div>
+                </div>
+
+                <!-- Recomendaciones ejecutivas -->
+                <div class="section-block">
+                    <h3>📌 Recomendaciones ejecutivas</h3>
+                    <ul>
+                        <li><strong>Revisar costos logísticos en la región norte:</strong> Renegociar contratos con proveedores o buscar alternativas de transporte para recuperar el margen.</li>
+                        <li><strong>Enfocar inversión en productos de alto margen:</strong> Aumentar presupuesto de marketing y promociones en las líneas con mayor rentabilidad.</li>
+                        <li><strong>Potenciar el canal online:</strong> Aprovechar la estacionalidad del cuarto trimestre con campañas específicas para el canal digital.</li>
+                        <li><strong>Evaluar la viabilidad de la unidad de muebles:</strong> Analizar si es necesario reestructurar o descontinuar líneas de bajo ROI.</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top:1rem;">
+                        <strong>Impacto estimado:</strong> La implementación del dashboard y las acciones derivadas permitieron un <strong>mejora del 5% en el margen bruto</strong> en el siguiente año, equivalente a <strong>$2.5M USD</strong> en valor adicional.
+                    </div>
+                </div>
+
+                <!-- Tecnologías utilizadas -->
+                <div class="section-block">
+                    <h3>⚙️ Tecnologías</h3>
+                    <p>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Data Blending</span>
+                        <span class="tech-tag">Git</span>
+                    </p>
+                </div>
+
+                <!-- Enlace a GitHub -->
+                <div class="section-block" style="text-align:center; margin: 3rem 0;">
+                    <ul class="actions fit">
+                        <li><a href="https://github.com/JesusSanchezM/executive-bi-dashboard" target="_blank" class="button primary icon brands fa-github">View full project on GitHub</a></li>
+                    </ul>
+                    <p style="font-size:0.9rem; color:#666;">
+                        Repositorio con los datos de muestra, el archivo de Tableau y la documentación del diseño.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Contact & Profiles</h2>
+                    <ul class="icons">
+                        <li><a href="https://linkedin.com/in/jesus-alexis-sanchez-moreno-b64694247" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/JesusSanchezM" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:sm224470329@alm.buap.mx" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="tel:+522221058033" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+                    </ul>
+                    <p>Puebla, Mexico</p>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Jesús Alexis Sánchez Moreno. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

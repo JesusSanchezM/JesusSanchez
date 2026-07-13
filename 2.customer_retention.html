@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Customer Retention Analytics | Alexis Sánchez</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        .project-header {
+            margin-bottom: 2rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .project-header .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            font-weight: 300;
+        }
+        .section-block {
+            margin: 2.5rem 0;
+        }
+        .section-block h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e8e8e8;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        .highlight-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2a2f4a;
+        }
+        .tech-tag {
+            display: inline-block;
+            background: #2a2f4a;
+            color: #fff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.2rem 0.2rem 0 0;
+        }
+        .dashboard-placeholder {
+            background: #eee;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            color: #555;
+            border: 2px dashed #aaa;
+            margin: 1.5rem 0;
+        }
+        .dashboard-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="index.html" class="logo">
+                    <span class="title">← Back to Portfolio</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Encabezado del proyecto -->
+                <div class="project-header">
+                    <h1>Customer Retention Analytics</h1>
+                    <p class="subtitle">Predictive churn modeling and economic impact for a telecom operator</p>
+                </div>
+
+                <!-- Contexto / Problema de negocio -->
+                <div class="section-block">
+                    <h3>📌 Contexto</h3>
+                    <p>
+                        Una empresa de telecomunicaciones enfrentó un incremento del 15% en la tasa de cancelación de clientes durante el último trimestre. El Director Comercial necesitaba identificar <strong>quiénes estaban en riesgo de irse</strong> y <strong>qué factores estaban impulsando la deserción</strong>, para diseñar campañas de retención efectivas y medir el impacto económico.
+                    </p>
+                    <div class="highlight-box">
+                        <strong>Pregunta de negocio:</strong> ¿Qué clientes tienen mayor probabilidad de abandonar la empresa durante el próximo mes y por qué?
+                    </div>
+                </div>
+
+                <!-- Objetivo -->
+                <div class="section-block">
+                    <h3>🎯 Objetivo</h3>
+                    <ul>
+                        <li>Detectar clientes en riesgo de churn con al menos 3 semanas de anticipación.</li>
+                        <li>Identificar las variables que más influyen en la decisión de cancelación.</li>
+                        <li>Priorizar acciones de retención enfocadas en los segmentos de mayor valor.</li>
+                        <li>Estimar el ahorro potencial en ingresos evitando la fuga.</li>
+                    </ul>
+                </div>
+
+                <!-- Metodología (alto nivel) -->
+                <div class="section-block">
+                    <h3>🛠️ Metodología</h3>
+                    <div class="grid-2col">
+                        <div>
+                            <h4>Exploración y datos</h4>
+                            <ul>
+                                <li>Análisis exploratorio de 7,043 clientes con 33 variables (demográficas, servicios, facturación).</li>
+                                <li>Limpieza y tratamiento de valores atípicos y faltantes.</li>
+                                <li>Ingeniería de características: antigüedad, ratio de tickets, cargos promedio.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Modelado e interpretación</h4>
+                            <ul>
+                                <li>Comparación de modelos: Random Forest, XGBoost, Regresión Logística.</li>
+                                <li>Optimización de hiperparámetros con GridSearchCV.</li>
+                                <li>Interpretabilidad con SHAP para identificar drivers de churn.</li>
+                                <li>Segmentación de clientes por perfil de riesgo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem;">
+                        <strong>Resultado clave:</strong> El modelo final alcanzó un <strong>Recall del 82%</strong> en la identificación de clientes que cancelaron, superando al modelo base en un 12% y reduciendo falsos negativos.
+                    </p>
+                </div>
+
+                <!-- Insights de negocio -->
+                <div class="section-block">
+                    <h3>💡 Insights de negocio</h3>
+                    <div class="grid-2col">
+                        <div class="highlight-box">
+                            <h4>Contratos mensuales</h4>
+                            <p>Los clientes con contrato mensual tienen <strong>3.2 veces más probabilidad</strong> de cancelar que los de contratos anuales.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Soporte técnico</h4>
+                            <p>Los clientes que nunca han usado el soporte técnico presentan una tasa de abandono un <strong>40% mayor</strong> que aquellos que han tenido al menos una interacción.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Antigüedad</h4>
+                            <p>El <strong>65%</strong> de los churn ocurre en clientes con menos de 12 meses de antigüedad.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Cargos elevados</h4>
+                            <p>Clientes con cargos mensuales superiores a $100 USD tienen un riesgo de churn <strong>1.8 veces mayor</strong> que la media.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard -->
+                <div class="section-block">
+                    <h3>📊 Dashboard interactivo</h3>
+                    <p>
+                        Diseñé un dashboard en <strong>Tableau</strong> que permite a los gerentes filtrar por perfil de cliente, visualizar la probabilidad de churn y monitorear KPIs de retención en tiempo real. 
+                    </p>
+                    <div class="dashboard-placeholder">
+                        <i class="fas fa-chart-pie"></i>
+                        <p><strong>Dashboard preview</strong><br />
+                        (Aquí irá la imagen o embed de tu dashboard)</p>
+                        <p style="font-size:0.8rem; margin-top:0.5rem;">Próximamente: enlace a Tableau Public</p>
+                    </div>
+                </div>
+
+                <!-- Recomendaciones ejecutivas -->
+                <div class="section-block">
+                    <h3>📌 Recomendaciones ejecutivas</h3>
+                    <ul>
+                        <li><strong>Ofrecer descuentos antes del mes 6:</strong> Campañas de retención focalizadas en clientes nuevos para fidelizarlos en el período crítico.</li>
+                        <li><strong>Incluir soporte gratuito:</strong> Paquetes que incluyan soporte técnico prioritario para clientes con contratos mensuales.</li>
+                        <li><strong>Migrar a contratos anuales:</strong> Incentivos para que clientes de alto valor cambien a planes anuales (ej. meses gratis).</li>
+                        <li><strong>Segmentar campañas:</strong> Enviar promociones personalizadas solo al 20% de clientes con mayor riesgo, optimizando el presupuesto.</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top:1rem;">
+                        <strong>Impacto estimado:</strong> Reducción del 12% en la tasa de churn en los primeros 6 meses, lo que representa un <strong>ahorro de ~$1.2M USD</strong> en ingresos anuales evitados.
+                    </div>
+                </div>
+
+                <!-- Tecnologías utilizadas -->
+                <div class="section-block">
+                    <h3>⚙️ Tecnologías</h3>
+                    <p>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">SHAP</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Git</span>
+                    </p>
+                </div>
+
+                <!-- Enlace a GitHub -->
+                <div class="section-block" style="text-align:center; margin: 3rem 0;">
+                    <ul class="actions fit">
+                        <li><a href="https://github.com/JesusSanchezM/customer-retention-analytics" target="_blank" class="button primary icon brands fa-github">View full project on GitHub</a></li>
+                    </ul>
+                    <p style="font-size:0.9rem; color:#666;">
+                        Repositorio con notebook, datos procesados, y archivos del dashboard.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Contact & Profiles</h2>
+                    <ul class="icons">
+                        <li><a href="https://linkedin.com/in/jesus-alexis-sanchez-moreno-b64694247" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/JesusSanchezM" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:sm224470329@alm.buap.mx" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="tel:+522221058033" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+                    </ul>
+                    <p>Puebla, Mexico</p>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Jesús Alexis Sánchez Moreno. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
