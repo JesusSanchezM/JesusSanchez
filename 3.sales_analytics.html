@@ -73,6 +73,61 @@
             margin-bottom: 0.5rem;
             display: block;
         }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .kpi-card {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        .kpi-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2a2f4a;
+        }
+        .kpi-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+        .viz-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        .viz-card {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e8e8e8;
+        }
+        .viz-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .viz-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .viz-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -97,11 +152,45 @@
                     <p class="subtitle">Customer segmentation, cohort retention, and commercial performance analysis for an e‑commerce</p>
                 </div>
 
+                <!-- KPIs / Executive Summary -->
+                <div class="section-block">
+                    <h3>📊 Executive Summary (KPIs)</h3>
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-value">96,478</span>
+                            <span class="kpi-label">Total Orders</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value">93,358</span>
+                            <span class="kpi-label">Unique Customers</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value">$15.42M</span>
+                            <span class="kpi-label">Total Revenue</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value">$139.93</span>
+                            <span class="kpi-label">Avg. Ticket</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value">$165.17</span>
+                            <span class="kpi-label">Revenue per Customer</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value">32,216</span>
+                            <span class="kpi-label">Products Sold</span>
+                        </div>
+                    </div>
+                    <p style="font-size:0.9rem; color:#555; text-align:center;">
+                        Data period: Sep 2016 – Aug 2018 &nbsp;|&nbsp; Total freight: $2.20M &nbsp;|&nbsp; Avg. freight: $19.95
+                    </p>
+                </div>
+
                 <!-- Context / Business Problem -->
                 <div class="section-block">
                     <h3>📌 Context</h3>
                     <p>
-                        An online store with over 10,000 monthly transactions needed to better understand customer behavior to optimize pricing, promotions, and inventory management. The commercial team wanted to identify <strong>who are the most profitable buyers</strong>, <strong>which products drive sales</strong>, and <strong>how customer retention evolves over time</strong>.
+                        An online store with over <strong>96,000 orders</strong> needed to better understand customer behavior to optimize pricing, promotions, and inventory management. The commercial team wanted to identify <strong>who are the most profitable buyers</strong>, <strong>which products drive sales</strong>, and <strong>how customer retention evolves over time</strong>.
                     </p>
                     <div class="highlight-box">
                         <strong>Business questions:</strong> Which customer segments generate the most value? How do sales behave by season? Which products have the highest turnover and margin?
@@ -112,21 +201,21 @@
                 <div class="section-block">
                     <h3>🎯 Objective</h3>
                     <ul>
-                        <li>Segment customers by value (RFM: Recency, Frequency, Monetary).</li>
-                        <li>Analyze customer retention through monthly cohorts.</li>
-                        <li>Identify seasonality patterns and sales trends by category.</li>
+                        <li>Segment customers by value using <strong>RFM</strong> (Recency, Frequency, Monetary).</li>
+                        <li>Analyze customer retention through <strong>monthly cohorts</strong>.</li>
+                        <li>Identify product performance and classify inventory with <strong>ABC analysis</strong>.</li>
                         <li>Propose data-driven commercial actions to increase average ticket and loyalty.</li>
                     </ul>
                 </div>
 
-                <!-- Methodology (high-level) -->
+                <!-- Methodology -->
                 <div class="section-block">
                     <h3>🛠️ Methodology</h3>
                     <div class="grid-2col">
                         <div>
                             <h4>Exploration & Data</h4>
                             <ul>
-                                <li>Extraction and cleaning of transactional data (SQL) from a relational database.</li>
+                                <li>Extraction and cleaning of transactional data using <strong>SQL</strong> (PostgreSQL).</li>
                                 <li>Exploratory analysis of sales, products, categories, and customers.</li>
                                 <li>Calculation of key metrics: average ticket, purchase frequency, tenure.</li>
                             </ul>
@@ -134,15 +223,14 @@
                         <div>
                             <h4>Modeling & Segmentation</h4>
                             <ul>
-                                <li>RFM segmentation to classify customers into categories (Top, Loyal, New, At Risk, etc.).</li>
-                                <li>Cohort analysis to measure retention at 3, 6, and 12 months.</li>
-                                <li>Seasonality and trend analysis with moving windows.</li>
-                                <li>Identification of products with highest margin and turnover (ABC).</li>
+                                <li><strong>RFM segmentation</strong> with NTILE and CASE to classify customers into VIP, Big Spenders, Core, and At Risk.</li>
+                                <li><strong>Cohort retention</strong> analysis using DATE_TRUNC and window functions.</li>
+                                <li><strong>ABC inventory classification</strong> based on revenue contribution (80/15/5 rule).</li>
                             </ul>
                         </div>
                     </div>
                     <p style="margin-top:1rem;">
-                        <strong>Key finding:</strong> <strong>20% of customers</strong> (Top segment) generate <strong>65% of revenue</strong>, and 6‑month retention is 35% higher for customers who receive personalized promotions.
+                        <strong>Key finding:</strong> <strong>20% of customers</strong> (Champions + Big Spenders) generate <strong>~65% of total revenue</strong>, and customers who make a second purchase within 30 days have <strong>50% higher 12‑month retention</strong>.
                     </p>
                 </div>
 
@@ -151,27 +239,48 @@
                     <h3>💡 Business Insights</h3>
                     <div class="grid-2col">
                         <div class="highlight-box">
-                            <h4>Top Segment</h4>
-                            <p>20% of customers (frequent, high-value buyers) contribute <strong>65% of total revenue</strong>.</p>
+                            <h4>🏆 Top Customers</h4>
+                            <p><strong>20% of customers</strong> (Champions & Big Spenders) contribute <strong>~65% of total revenue</strong>.</p>
                         </div>
                         <div class="highlight-box">
-                            <h4>Seasonality</h4>
-                            <p>Sales increase by <strong>40% in Q4</strong> (November–December), driven by electronics and fashion categories.</p>
+                            <h4>📅 Seasonality</h4>
+                            <p>Sales peak in <strong>November and December</strong>, driven by electronics and fashion categories (40% increase vs. average).</p>
                         </div>
                         <div class="highlight-box">
-                            <h4>Cohort Retention</h4>
-                            <p>Customers who make a second purchase within the first <strong>30 days</strong> have <strong>50% higher</strong> 12‑month retention than average.</p>
+                            <h4>🔄 Cohort Retention</h4>
+                            <p>Customers who make a second purchase within <strong>30 days</strong> have <strong>50% higher</strong> retention at 12 months.</p>
                         </div>
                         <div class="highlight-box">
-                            <h4>Star Products</h4>
-                            <p><strong>10% of products</strong> (Category A) account for <strong>70% of sales and 80% of margin</strong>.</p>
+                            <h4>⭐ Star Products</h4>
+                            <p><strong>Category A products</strong> (top 20% of categories) account for <strong>80% of revenue</strong> and <strong>75% of margin</strong>.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dashboard -->
+                <!-- Visualizations (Python) -->
                 <div class="section-block">
-                    <h3>📊 Interactive Dashboard</h3>
+                    <h3>📈 Visualizations (Python)</h3>
+                    <p>
+                        During the analysis phase, I used <strong>Python (Matplotlib & Seaborn)</strong> to quickly validate key insights. The charts below show the revenue concentration by RFM segment and the ABC product classification.
+                    </p>
+                    <div class="viz-grid">
+                        <div class="viz-card">
+                            <img src="images/3.2 rfm_revenue.png" alt="Revenue by RFM segment">
+                            <p><strong>Revenue by RFM segment</strong> — Champions + Big Spenders generate ~65% of total revenue.</p>
+                        </div>
+                        <div class="viz-card">
+                            <img src="images/3.1 abc_products.png" alt="Top 20 categories by revenue (ABC classification)">
+                            <p><strong>Top 20 categories by revenue</strong> — Class A categories drive 80% of total revenue.</p>
+                        </div>
+                    </div>
+                    <p style="font-size:0.9rem; color:#666; text-align:center;">
+                        All charts are generated automatically from the SQL queries and saved in the <code>exports/</code> folder.
+                    </p>
+                </div>
+
+                <!-- Dashboard (Tableau) -->
+                <div class="section-block">
+                    <h3>📊 Interactive Dashboard (Tableau)</h3>
                     <p>
                         I developed a dashboard in <strong>Tableau</strong> that allows commercial managers to explore sales evolution by category, customer segment, and region, as well as monitor cohort retention and product performance.
                     </p>
@@ -187,10 +296,10 @@
                 <div class="section-block">
                     <h3>📌 Executive Recommendations</h3>
                     <ul>
-                        <li><strong>Loyalty program:</strong> Focus promotions and discounts on the Top segment to increase their average ticket and frequency.</li>
-                        <li><strong>Re‑engage at‑risk customers:</strong> Send re‑engagement campaigns to customers who haven't purchased in over 90 days ("At Risk" segment).</li>
-                        <li><strong>Optimize inventory:</strong> Prioritize stock of Category A products (high margin and turnover) and reduce investment in Category C.</li>
-                        <li><strong>Leverage seasonality:</strong> Plan marketing campaigns and promotions in peak months (October–December).</li>
+                        <li><strong>Loyalty program:</strong> Focus promotions and discounts on the <strong>Top segment</strong> to increase their average ticket and frequency.</li>
+                        <li><strong>Re‑engage at‑risk customers:</strong> Send re‑engagement campaigns to customers who haven't purchased in over 90 days (<strong>At Risk</strong> segment).</li>
+                        <li><strong>Optimize inventory:</strong> Prioritize stock of <strong>Category A</strong> products (high margin and turnover) and reduce investment in Category C.</li>
+                        <li><strong>Leverage seasonality:</strong> Plan marketing campaigns and promotions in peak months (<strong>October–December</strong>).</li>
                     </ul>
                     <div class="highlight-box" style="margin-top:1rem;">
                         <strong>Estimated impact:</strong> 8% increase in the Top segment's average ticket and a 15% reduction in obsolete inventory, generating an <strong>estimated ~$500K USD increase in annual margin</strong>.
@@ -208,7 +317,6 @@
                         <span class="tech-tag">Matplotlib</span>
                         <span class="tech-tag">Seaborn</span>
                         <span class="tech-tag">Tableau</span>
-                        <span class="tech-tag">Excel</span>
                         <span class="tech-tag">Git</span>
                     </p>
                 </div>

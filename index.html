@@ -2,426 +2,557 @@
 <html lang="en">
 
 <head>
-	<title>Jesus Sanchez | Analytics & Data Consultant</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description"
-		content="Jesus Sanchez – Analytics & Data Consultant, Economist. Specializing in Business Intelligence, applied econometrics, and data engineering for decision-making." />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	<style>
-		/* Tool card styles */
-		.tool-card {
-			background: #ffffff;
-			border-radius: 8px;
-			padding: 1.5rem 1rem;
-			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-			text-align: center;
-			height: 100%;
-			transition: transform 0.2s;
-		}
-		.tool-card:hover {
-			transform: translateY(-5px);
-		}
-		.tool-card .icon {
-			font-size: 3rem;
-			margin-bottom: 0.5rem;
-			color: #2a2f4a;
-		}
-		.tool-card h4 {
-			margin: 0.5rem 0;
-			font-weight: 600;
-		}
-		.tool-card .toggle-libs {
-			background: none;
-			border: none;
-			color: #2a2f4a;
-			cursor: pointer;
-			font-size: 1.2rem;
-			padding: 0.2rem 0.5rem;
-			border-radius: 20px;
-			transition: background 0.2s;
-		}
-		.tool-card .toggle-libs:hover {
-			background: #f0f0f0;
-		}
-		.libs-list {
-			display: none;
-			margin-top: 0.8rem;
-			padding: 0.5rem;
-			background: #f9f9f9;
-			border-radius: 6px;
-			font-size: 0.9rem;
-			text-align: left;
-		}
-		.libs-list ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		.libs-list ul li {
-			padding: 0.2rem 0;
-			border-bottom: 1px solid #eee;
-		}
-		.libs-list ul li:last-child {
-			border-bottom: none;
-		}
-		.cloud-card {
-			background: #ffffff;
-			border-radius: 8px;
-			padding: 1.5rem 1rem;
-			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-			text-align: center;
-			height: 100%;
-			transition: transform 0.2s;
-		}
-		.cloud-card:hover {
-			transform: translateY(-5px);
-		}
-		.cloud-card .icon {
-			font-size: 3rem;
-			margin-bottom: 0.5rem;
-			color: #2a2f4a;
-		}
-		.cloud-card h4 {
-			margin: 0.5rem 0;
-			font-weight: 600;
-		}
-		.section-title {
-			margin-top: 2.5rem;
-			margin-bottom: 1.5rem;
-			font-weight: 600;
-			border-bottom: 2px solid #e8e8e8;
-			padding-bottom: 0.5rem;
-		}
-	</style>
+    <title>Jesus Sanchez | Analytics & Data Consultant</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description"
+        content="Jesus Sanchez – Analytics & Data Consultant, Economist. Specializing in Business Intelligence, applied econometrics, and data engineering for decision-making." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        /* Tool card styles */
+        .tool-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            height: 100%;
+            transition: transform 0.2s;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+        .tool-card .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #2a2f4a;
+        }
+        .tool-card h4 {
+            margin: 0.5rem 0;
+            font-weight: 600;
+        }
+        .tool-card .toggle-libs {
+            background: none;
+            border: none;
+            color: #2a2f4a;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+        .tool-card .toggle-libs:hover {
+            background: #f0f0f0;
+        }
+        .libs-list {
+            display: none;
+            margin-top: 0.8rem;
+            padding: 0.5rem;
+            background: #f9f9f9;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        .libs-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .libs-list ul li {
+            padding: 0.2rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .libs-list ul li:last-child {
+            border-bottom: none;
+        }
+        .cloud-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            height: 100%;
+            transition: transform 0.2s;
+        }
+        .cloud-card:hover {
+            transform: translateY(-5px);
+        }
+        .cloud-card .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #2a2f4a;
+        }
+        .cloud-card h4 {
+            margin: 0.5rem 0;
+            font-weight: 600;
+        }
+        .section-title {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e8e8e8;
+            padding-bottom: 0.5rem;
+        }
+
+        /* ======== PROJECT STATUS BADGE STYLES ======== */
+        .project-tile {
+            position: relative;
+        }
+        .project-status {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(0,0,0,0.06);
+            pointer-events: none;
+        }
+        .status-complete {
+            color: #1a7c3a;
+            background: rgba(209, 231, 221, 0.92);
+            border-color: #a3d0b5;
+        }
+        .status-complete::before {
+            content: "✅ ";
+        }
+        .status-progress {
+            color: #9e6d0b;
+            background: rgba(255, 235, 196, 0.92);
+            border-color: #f5d78c;
+        }
+        .status-progress::before {
+            content: "🚧 ";
+        }
+        .status-template {
+            color: #6b7280;
+            background: rgba(229, 231, 235, 0.92);
+            border-color: #d1d5db;
+        }
+        .status-template::before {
+            content: "📝 ";
+        }
+
+        /* Legend styles */
+        .status-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 0.75rem 0 1.5rem 0;
+            padding: 0.5rem 0.75rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border: 1px solid #e9ecef;
+        }
+        .status-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .status-legend-item .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        .dot-complete {
+            background: #1a7c3a;
+        }
+        .dot-progress {
+            background: #9e6d0b;
+        }
+        .dot-template {
+            background: #6b7280;
+        }
+
+        .tiles article {
+            position: relative;
+            overflow: visible;
+        }
+        .tiles article .image {
+            overflow: visible;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
-	<div id="wrapper">
+    <div id="wrapper">
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-				<a href="index.html" class="logo">
-					<span class="symbol"><img src="images/logo.svg" alt="" /></span>
-					<span class="title">Jesus Sanchez</span>
-				</a>
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="images/logo.svg" alt="" /></span>
+                    <span class="title">Jesus Sanchez</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="https://github.com/JesusSanchezM" target="_blank">GitHub</a></li>
-				<li><a href="https://linkedin.com/in/jesus-alexis-sanchez-moreno-b64694247" target="_blank">LinkedIn</a>
-				</li>
-			</ul>
-		</nav>
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://github.com/JesusSanchezM" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/jesus-alexis-sanchez-moreno-b64694247" target="_blank">LinkedIn</a>
+                </li>
+            </ul>
+        </nav>
 
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
 
-				<!-- Hero Section -->
-				<header>
-					<h1>
-						Analytics & Data Consultant | Economist<br />
-						Turning data into decisions.
-					</h1>
-					<p>
-						I help organizations turn data into decisions — from building automated data pipelines and interactive dashboards to predictive models that drive revenue and efficiency. I combine econometrics, machine learning, and business intelligence to solve real-world problems in telecom, retail, finance, and public policy.
-					</p>
-				</header>
+                <!-- Hero Section -->
+                <header>
+                    <h1>
+                        Analytics & Data Consultant | Economist<br />
+                        Turning data into decisions.
+                    </h1>
+                    <p>
+                        I help organizations turn data into decisions — from building automated data pipelines and interactive dashboards to predictive models that drive revenue and efficiency. I combine econometrics, machine learning, and business intelligence to solve real-world problems in telecom, retail, finance, and public policy.
+                    </p>
+                </header>
 
-				<!-- Languages & Libraries -->
-				<h2 class="section-title">Languages & Libraries</h2>
-				<div class="row">
-					<!-- Python -->
-					<div class="col-3 col-6-medium col-12-small">
-						<div class="tool-card">
-							<div class="icon"><i class="fab fa-python"></i></div>
-							<h4>Python</h4>
-							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
-							<div class="libs-list">
-								<ul>
-									<li>Pandas</li>
-									<li>NumPy</li>
-									<li>Scikit-learn</li>
-									<li>Matplotlib</li>
-									<li>Seaborn</li>
-									<li>XGBoost</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- R -->
-					<div class="col-3 col-6-medium col-12-small">
-						<div class="tool-card">
-							<div class="icon"><i class="fab fa-r-project"></i></div>
-							<h4>R</h4>
-							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
-							<div class="libs-list">
-								<ul>
-									<li>dplyr</li>
-									<li>ggplot2</li>
-									<li>tidyr</li>
-									<li>caret</li>
-									<li>randomForest</li>
-									<li>plm</li>
-									<li>forecast</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- SQL -->
-					<div class="col-3 col-6-medium col-12-small">
-						<div class="tool-card">
-							<div class="icon"><i class="fas fa-database"></i></div>
-							<h4>SQL</h4>
-							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
-							<div class="libs-list">
-								<ul>
-									<li>PostgreSQL</li>
-									<li>MySQL</li>
-									<li>SQL Server</li>
-									<li>CTEs</li>
-									<li>Window Functions</li>
-									<li>Query Optimization</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- Visualization -->
-					<div class="col-3 col-6-medium col-12-small">
-						<div class="tool-card">
-							<div class="icon"><i class="fas fa-chart-bar"></i></div>
-							<h4>Visualization</h4>
-							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
-							<div class="libs-list">
-								<ul>
-									<li>Tableau</li>
-									<li>Power BI</li>
-									<li>DAX</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Second row: Excel -->
-				<div class="row">
-					<div class="col-3 col-6-medium col-12-small">
-						<div class="tool-card">
-							<div class="icon"><i class="fas fa-file-excel"></i></div>
-							<h4>Excel</h4>
-							<button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
-							<div class="libs-list">
-								<ul>
-									<li>Power Query</li>
-									<li>VBA / Macros</li>
-									<li>Pivot Tables</li>
-									<li>Power Pivot</li>
-									<li>Advanced Formulas</li>
-									<li>Data Modeling</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+                <!-- Languages & Libraries -->
+                <h2 class="section-title">Languages & Libraries</h2>
+                <div class="row">
+                    <!-- Python -->
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="tool-card">
+                            <div class="icon"><i class="fab fa-python"></i></div>
+                            <h4>Python</h4>
+                            <button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+                            <div class="libs-list">
+                                <ul>
+                                    <li>Pandas</li>
+                                    <li>NumPy</li>
+                                    <li>Scikit-learn</li>
+                                    <li>Matplotlib</li>
+                                    <li>Seaborn</li>
+                                    <li>XGBoost</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- R -->
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="tool-card">
+                            <div class="icon"><i class="fab fa-r-project"></i></div>
+                            <h4>R</h4>
+                            <button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+                            <div class="libs-list">
+                                <ul>
+                                    <li>dplyr</li>
+                                    <li>ggplot2</li>
+                                    <li>tidyr</li>
+                                    <li>caret</li>
+                                    <li>randomForest</li>
+                                    <li>plm</li>
+                                    <li>forecast</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SQL -->
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="tool-card">
+                            <div class="icon"><i class="fas fa-database"></i></div>
+                            <h4>SQL</h4>
+                            <button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+                            <div class="libs-list">
+                                <ul>
+                                    <li>PostgreSQL</li>
+                                    <li>MySQL</li>
+                                    <li>SQL Server</li>
+                                    <li>CTEs</li>
+                                    <li>Window Functions</li>
+                                    <li>Query Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Visualization -->
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="tool-card">
+                            <div class="icon"><i class="fas fa-chart-bar"></i></div>
+                            <h4>Visualization</h4>
+                            <button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+                            <div class="libs-list">
+                                <ul>
+                                    <li>Tableau</li>
+                                    <li>Power BI</li>
+                                    <li>DAX</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second row: Excel -->
+                <div class="row">
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="tool-card">
+                            <div class="icon"><i class="fas fa-file-excel"></i></div>
+                            <h4>Excel</h4>
+                            <button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
+                            <div class="libs-list">
+                                <ul>
+                                    <li>Power Query</li>
+                                    <li>VBA / Macros</li>
+                                    <li>Pivot Tables</li>
+                                    <li>Power Pivot</li>
+                                    <li>Advanced Formulas</li>
+                                    <li>Data Modeling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Infrastructure & Cloud -->
-				<h2 class="section-title">Infrastructure & Cloud</h2>
-				<div class="row">
-					<div class="col-3 col-6-medium col-12-small">
-						<div class="cloud-card">
-							<div class="icon"><i class="fas fa-cloud"></i></div>
-							<h4>Databricks</h4>
-							<p style="font-size:0.9rem; color:#666;">Unified analytics platform</p>
-						</div>
-					</div>
-					<div class="col-3 col-6-medium col-12-small">
-						<div class="cloud-card">
-							<div class="icon"><i class="fab fa-aws"></i></div>
-							<h4>AWS</h4>
-							<p style="font-size:0.9rem; color:#666;">S3, EC2, Redshift, Glue</p>
-						</div>
-					</div>
-				</div>
+                <!-- Infrastructure & Cloud -->
+                <h2 class="section-title">Infrastructure & Cloud</h2>
+                <div class="row">
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="cloud-card">
+                            <div class="icon"><i class="fas fa-cloud"></i></div>
+                            <h4>Databricks</h4>
+                            <p style="font-size:0.9rem; color:#666;">Unified analytics platform</p>
+                        </div>
+                    </div>
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="cloud-card">
+                            <div class="icon"><i class="fab fa-aws"></i></div>
+                            <h4>AWS</h4>
+                            <p style="font-size:0.9rem; color:#666;">S3, EC2, Redshift, Glue</p>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Projects -->
-				<h2 class="section-title">Selected Data Science Work</h2>
-				<section class="tiles">
+                <!-- Projects -->
+                <h2 class="section-title">Selected Data Science Work</h2>
 
-					<article class="style1">
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-						<a href="1.supply_chain.html">
-							<h2>Supply Chain Analytics</h2>
-							<div class="content">
-								<p>
-									Demand forecasting, inventory optimization, and unsupervised learning
-									for operational decision-making.
-								</p>
-							</div>
-						</a>
-					</article>
+                <!-- Status Legend -->
+                <div class="status-legend">
+                    <span style="font-weight:600; color:#2a2f4a; margin-right:0.5rem;">Project status:</span>
+                    <span class="status-legend-item">
+                        <span class="dot dot-complete"></span> Complete
+                    </span>
+                    <span class="status-legend-item">
+                        <span class="dot dot-progress"></span> In progress
+                    </span>
+                    <span style="font-size:0.8rem; color:#888; margin-left:auto;">
+                        <i class="fas fa-info-circle"></i> Click on any tile to view details
+                    </span>
+                </div>
 
-					<article class="style2">
-						<span class="image"><img src="images/pic02.jpg" alt="" /></span>
-						<a href="2.customer_retention.html">
-							<h2>Customer Retention Analytics</h2>
-							<div class="content">
-								<p>
-									Predictive modeling of churn, feature engineering, business insights,
-									and economic impact estimation for telecom.
-								</p>
-							</div>
-						</a>
-					</article>
+                <section class="tiles">
 
-					<article class="style3">
-						<span class="image"><img src="images/pic03.jpg" alt="" /></span>
-						<a href="3.sales_analytics.html">
-							<h2>Sales Analytics</h2>
-							<div class="content">
-								<p>
-									SQL-based exploratory analysis, cohort retention, and KPI dashboards
-									for e‑commerce performance.
-								</p>
-							</div>
-						</a>
-					</article>
+                    <!-- ======================================================== -->
+                    <!-- PROJECT 1: SUPPLY CHAIN ANALYTICS ✅ COMPLETE              -->
+                    <!-- ======================================================== -->
+                    <article class="style1 project-tile">
+                        <span class="project-status status-complete">Complete</span>
+                        <span class="image"><img src="images/pic01.jpg" alt="Supply Chain Analytics" /></span>
+                        <a href="1.supply_chain.html">
+                            <h2>Supply Chain Analytics</h2>
+                            <div class="content">
+                                <p>
+                                    Demand forecasting, inventory optimization, and unsupervised learning
+                                    for operational decision-making. <strong>✅ Full project available.</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </article>
 
-					<article class="style4">
-						<span class="image"><img src="images/pic04.jpg" alt="" /></span>
-						<a href="4.executive_dashboard.html">
-							<h2>Executive BI Dashboard</h2>
-							<div class="content">
-								<p>
-									Interactive Tableau dashboard with financial KPIs, forecasting,
-									and scenario analysis for C‑level decision-making.
-								</p>
-							</div>
-						</a>
-					</article>
+                    <!-- ======================================================== -->
+                    <!-- PROJECT 2: CUSTOMER RETENTION ANALYTICS 🚧 IN PROGRESS   -->
+                    <!-- ======================================================== -->
+                    <article class="style2 project-tile">
+                        <span class="project-status status-progress">In progress</span>
+                        <span class="image"><img src="images/pic02.jpg" alt="Customer Retention Analytics" /></span>
+                        <a href="2.customer_retention.html">
+                            <h2>Customer Retention Analytics</h2>
+                            <div class="content">
+                                <p>
+                                    Predictive modeling of churn, feature engineering, business insights,
+                                    and economic impact estimation for telecom.
+                                    <strong style="color:#9e6d0b;">🚧 Under development — coming soon.</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </article>
 
-					<article class="style5">
-						<span class="image"><img src="images/pic05.jpg" alt="" /></span>
-						<a href="5.publications.html">
-							<h2>Research & Publications</h2>
-							<div class="content">
-								<p>
-									Academic research, empirical papers, and central-bank data challenges.
-								</p>
-							</div>
-						</a>
-					</article>
+                    <!-- ======================================================== -->
+                    <!-- PROJECT 3: SALES ANALYTICS ✅ COMPLETE                    -->
+                    <!-- ======================================================== -->
+                    <article class="style3 project-tile">
+                        <span class="project-status status-complete">Complete</span>
+                        <span class="image"><img src="images/pic03.jpg" alt="Sales Analytics" /></span>
+                        <a href="3.sales_analytics.html">
+                            <h2>Sales Analytics</h2>
+                            <div class="content">
+                                <p>
+                                    SQL-based exploratory analysis, cohort retention, and KPI dashboards
+                                    for e‑commerce performance. <strong>✅ Full project available.</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </article>
 
-					<article class="style6">
-						<span class="image"><img src="images/pic06.jpg" alt="" /></span>
-						<a href="6.certificates.html">
-							<h2>Credentials & Training</h2>
-							<div class="content">
-								<p>
-									Applied Data Science, FinTech, and professional certifications.
-								</p>
-							</div>
-						</a>
-					</article>
+                    <!-- ======================================================== -->
+                    <!-- PROJECT 4: EXECUTIVE BI DASHBOARD 🚧 IN PROGRESS          -->
+                    <!-- ======================================================== -->
+                    <article class="style4 project-tile">
+                        <span class="project-status status-progress">In progress</span>
+                        <span class="image"><img src="images/pic04.jpg" alt="Executive BI Dashboard" /></span>
+                        <a href="4.executive_dashboard.html">
+                            <h2>Executive BI Dashboard</h2>
+                            <div class="content">
+                                <p>
+                                    Interactive Tableau dashboard with financial KPIs, forecasting,
+                                    and scenario analysis for C‑level decision-making.
+                                    <strong style="color:#9e6d0b;">🚧 Under development — coming soon.</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </article>
 
-				</section>
+                    <!-- ======================================================== -->
+                    <!-- PROJECT 5: RESEARCH & PUBLICATIONS ✅ COMPLETE (UPDATED)  -->
+                    <!-- ======================================================== -->
+                    <article class="style5 project-tile">
+                        <span class="project-status status-complete">Complete</span>
+                        <span class="image"><img src="images/pic05.jpg" alt="Research & Publications" /></span>
+                        <a href="5.publications.html">
+                            <h2>Research & Publications</h2>
+                            <div class="content">
+                                <p>
+                                    Academic research, empirical papers, and central-bank data challenges.
+                                    <strong>✅ Full portfolio available — including published papers and working documents.</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </article>
 
-				<br />
+                    <!-- ======================================================== -->
+                    <!-- PROJECT 6: CREDENTIALS & TRAINING ✅ COMPLETE (UPDATED)   -->
+                    <!-- ======================================================== -->
+                    <article class="style6 project-tile">
+                        <span class="project-status status-complete">Complete</span>
+                        <span class="image"><img src="images/pic06.jpg" alt="Credentials & Training" /></span>
+                        <a href="6.certificates.html">
+                            <h2>Credentials & Training</h2>
+                            <div class="content">
+                                <p>
+                                    Applied Data Science, FinTech, and professional certifications.
+                                    <strong>✅ Full list of credentials and certifications available.</strong>
+                                </p>
+                            </div>
+                        </a>
+                    </article>
 
-				<!-- Tech Stack (complementary) -->
-				<h2 class="section-title">Technical Expertise</h2>
-				<div class="row">
-					<div class="col-6 col-12-medium">
-						<ul>
-							<li><b>Programming:</b> Python (Pandas, NumPy, Scikit-learn), R, SQL, STATA</li>
-							<li><b>Modeling:</b> Machine Learning, Time Series, Clustering, Forecasting</li>
-							<li><b>Econometrics:</b> Causal Inference, SVAR, Probit/Logit, Panel Data</li>
-						</ul>
-					</div>
-					<div class="col-6 col-12-medium">
-						<ul>
-							<li><b>Data Engineering:</b> ETL Pipelines, Docker, Linux, Git/GitHub</li>
-							<li><b>Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn</li>
-							<li><b>Productivity:</b> Excel (Advanced & VBA)</li>
-						</ul>
-					</div>
-				</div>
+                </section>
 
-			</div>
-		</div>
+                <br />
 
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<section>
-					<h2>Contact & Profiles</h2>
-					<ul class="icons">
-						<li>
-							<a href="https://linkedin.com/in/jesus-alexis-sanchez-moreno-b64694247"
-								class="icon brands style2 fa-linkedin">
-								<span class="label">LinkedIn</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/JesusSanchezM" class="icon brands style2 fa-github">
-								<span class="label">GitHub</span>
-							</a>
-						</li>
-						<li>
-							<a href="mailto:sm224470329@alm.buap.mx" class="icon solid style2 fa-envelope">
-								<span class="label">Email</span>
-							</a>
-						</li>
-						<li>
-							<a href="tel:+522221058033" class="icon solid style2 fa-phone">
-								<span class="label">Phone</span>
-							</a>
-						</li>
-					</ul>
-					<p>Puebla, Mexico</p>
-				</section>
+                <!-- Tech Stack (complementary) -->
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <ul>
+                            <li><b>Programming:</b> Python (Pandas, NumPy, Scikit-learn), R, SQL, STATA</li>
+                            <li><b>Modeling:</b> Machine Learning, Time Series, Clustering, Forecasting</li>
+                            <li><b>Econometrics:</b> Causal Inference, SVAR, Probit/Logit, Panel Data</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-12-medium">
+                        <ul>
+                            <li><b>Data Engineering:</b> ETL Pipelines, Docker, Linux, Git/GitHub</li>
+                            <li><b>Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn</li>
+                            <li><b>Productivity:</b> Excel (Advanced & VBA)</li>
+                        </ul>
+                    </div>
+                </div>
 
-				<ul class="copyright">
-					<li>&copy; Jesús Alexis Sánchez Moreno. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
+            </div>
+        </div>
 
-	</div>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Contact & Profiles</h2>
+                    <ul class="icons">
+                        <li>
+                            <a href="https://linkedin.com/in/jesus-alexis-sanchez-moreno-b64694247"
+                                class="icon brands style2 fa-linkedin">
+                                <span class="label">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JesusSanchezM" class="icon brands style2 fa-github">
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:sm224470329@alm.buap.mx" class="icon solid style2 fa-envelope">
+                                <span class="label">Email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+522221058033" class="icon solid style2 fa-phone">
+                                <span class="label">Phone</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Puebla, Mexico</p>
+                </section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+                <ul class="copyright">
+                    <li>&copy; Jesús Alexis Sánchez Moreno. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
 
-	<!-- Dropdown toggle script -->
-	<script>
-		$(document).ready(function(){
-			$('.toggle-libs').click(function(e){
-				e.stopPropagation();
-				var list = $(this).next('.libs-list');
-				list.slideToggle();
-				var icon = $(this).find('span');
-				icon.toggleClass('fa-chevron-down fa-chevron-up');
-			});
-		});
-	</script>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Dropdown toggle script -->
+    <script>
+        $(document).ready(function(){
+            $('.toggle-libs').click(function(e){
+                e.stopPropagation();
+                var list = $(this).next('.libs-list');
+                list.slideToggle();
+                var icon = $(this).find('span');
+                icon.toggleClass('fa-chevron-down fa-chevron-up');
+            });
+        });
+    </script>
 
 </body>
 
