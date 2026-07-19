@@ -271,7 +271,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- SQL -->
+                    <!-- SQL (sin motores específicos para evitar duplicidad) -->
                     <div class="col-3 col-6-medium col-12-small">
                         <div class="tool-card">
                             <div class="icon"><i class="fas fa-database"></i></div>
@@ -279,12 +279,11 @@
                             <button class="toggle-libs"><span class="fas fa-chevron-down"></span></button>
                             <div class="libs-list">
                                 <ul>
-                                    <li>PostgreSQL</li>
-                                    <li>MySQL</li>
-                                    <li>SQL Server</li>
-                                    <li>CTEs</li>
+                                    <li>CTEs (Common Table Expressions)</li>
                                     <li>Window Functions</li>
                                     <li>Query Optimization</li>
+                                    <li>Complex Joins</li>
+                                    <li>Subqueries & Derived Tables</li>
                                 </ul>
                             </div>
                         </div>
@@ -345,6 +344,39 @@
                     </div>
                 </div>
 
+                <!-- ===== SECCIÓN DATA ENGINEERING & DEVOPS (sin duplicar motores) ===== -->
+                <h2 class="section-title">Data Engineering & DevOps</h2>
+                <div class="row">
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="cloud-card">
+                            <div class="icon"><i class="fab fa-git-alt"></i></div>
+                            <h4>Git & GitHub</h4>
+                            <p style="font-size:0.9rem; color:#666;">Version control, branching, PRs</p>
+                        </div>
+                    </div>
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="cloud-card">
+                            <div class="icon"><i class="fab fa-docker"></i></div>
+                            <h4>Docker</h4>
+                            <p style="font-size:0.9rem; color:#666;">Containerization, Docker Compose</p>
+                        </div>
+                    </div>
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="cloud-card">
+                            <div class="icon"><i class="fas fa-server"></i></div>
+                            <h4>SQL Server</h4>
+                            <p style="font-size:0.9rem; color:#666;">Management, stored procedures, SSIS</p>
+                        </div>
+                    </div>
+                    <div class="col-3 col-6-medium col-12-small">
+                        <div class="cloud-card">
+                            <div class="icon"><i class="fas fa-database"></i></div>
+                            <h4>PostgreSQL</h4>
+                            <p style="font-size:0.9rem; color:#666;">Advanced queries, indexing, PL/pgSQL</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Projects -->
                 <h2 class="section-title">Selected Data Science Work</h2>
 
@@ -364,9 +396,7 @@
 
                 <section class="tiles">
 
-                    <!-- ======================================================== -->
-                    <!-- PROJECT 1: SUPPLY CHAIN ANALYTICS ✅ COMPLETE              -->
-                    <!-- ======================================================== -->
+                    <!-- PROJECT 1: SUPPLY CHAIN ANALYTICS ✅ COMPLETE -->
                     <article class="style1 project-tile">
                         <span class="project-status status-complete">Complete</span>
                         <span class="image"><img src="images/pic01.jpg" alt="Supply Chain Analytics" /></span>
@@ -381,9 +411,7 @@
                         </a>
                     </article>
 
-                    <!-- ======================================================== -->
-                    <!-- PROJECT 2: CUSTOMER RETENTION ANALYTICS 🚧 IN PROGRESS   -->
-                    <!-- ======================================================== -->
+                    <!-- PROJECT 2: CUSTOMER RETENTION ANALYTICS 🚧 IN PROGRESS -->
                     <article class="style2 project-tile">
                         <span class="project-status status-progress">In progress</span>
                         <span class="image"><img src="images/pic02.jpg" alt="Customer Retention Analytics" /></span>
@@ -399,9 +427,7 @@
                         </a>
                     </article>
 
-                    <!-- ======================================================== -->
-                    <!-- PROJECT 3: SALES ANALYTICS ✅ COMPLETE                    -->
-                    <!-- ======================================================== -->
+                    <!-- PROJECT 3: SALES ANALYTICS ✅ COMPLETE -->
                     <article class="style3 project-tile">
                         <span class="project-status status-complete">Complete</span>
                         <span class="image"><img src="images/pic03.jpg" alt="Sales Analytics" /></span>
@@ -416,9 +442,7 @@
                         </a>
                     </article>
 
-                    <!-- ======================================================== -->
-                    <!-- PROJECT 4: EXECUTIVE BI DASHBOARD 🚧 IN PROGRESS          -->
-                    <!-- ======================================================== -->
+                    <!-- PROJECT 4: EXECUTIVE BI DASHBOARD 🚧 IN PROGRESS -->
                     <article class="style4 project-tile">
                         <span class="project-status status-progress">In progress</span>
                         <span class="image"><img src="images/pic04.jpg" alt="Executive BI Dashboard" /></span>
@@ -434,9 +458,7 @@
                         </a>
                     </article>
 
-                    <!-- ======================================================== -->
-                    <!-- PROJECT 5: RESEARCH & PUBLICATIONS ✅ COMPLETE (UPDATED)  -->
-                    <!-- ======================================================== -->
+                    <!-- PROJECT 5: RESEARCH & PUBLICATIONS ✅ COMPLETE -->
                     <article class="style5 project-tile">
                         <span class="project-status status-complete">Complete</span>
                         <span class="image"><img src="images/pic05.jpg" alt="Research & Publications" /></span>
@@ -451,9 +473,7 @@
                         </a>
                     </article>
 
-                    <!-- ======================================================== -->
-                    <!-- PROJECT 6: CREDENTIALS & TRAINING ✅ COMPLETE (UPDATED)   -->
-                    <!-- ======================================================== -->
+                    <!-- PROJECT 6: CREDENTIALS & TRAINING ✅ COMPLETE -->
                     <article class="style6 project-tile">
                         <span class="project-status status-complete">Complete</span>
                         <span class="image"><img src="images/pic06.jpg" alt="Credentials & Training" /></span>
@@ -484,7 +504,8 @@
                     </div>
                     <div class="col-6 col-12-medium">
                         <ul>
-                            <li><b>Data Engineering:</b> ETL Pipelines, Docker, Linux, Git/GitHub</li>
+                            <!-- Incluimos los motores aquí también, como parte del stack de ingeniería -->
+                            <li><b>Data Engineering:</b> ETL Pipelines, Docker, Linux, Git/GitHub, SQL Server, PostgreSQL</li>
                             <li><b>Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn</li>
                             <li><b>Productivity:</b> Excel (Advanced & VBA)</li>
                         </ul>
