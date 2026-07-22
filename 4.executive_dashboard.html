@@ -50,6 +50,45 @@
             border-radius: 8px;
             border-left: 4px solid #2a2f4a;
         }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .kpi-card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 3px solid #2a2f4a;
+        }
+        .kpi-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2a2f4a;
+        }
+        .kpi-card .label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+            margin-top: 0.3rem;
+        }
+        @media (max-width: 768px) {
+            .kpi-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .insight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .insight-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         .tech-tag {
             display: inline-block;
             background: #2a2f4a;
@@ -59,19 +98,40 @@
             font-size: 0.8rem;
             margin: 0.2rem 0.2rem 0 0;
         }
-        .dashboard-placeholder {
-            background: #eee;
+        /* Dashboard container - "cajita" style */
+        .dashboard-container {
+            background: #f5f5f5;
             border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            color: #555;
-            border: 2px dashed #aaa;
+            padding: 1rem;
             margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        .dashboard-placeholder i {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            display: block;
+        .tableauPlaceholder {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 66.67%; /* 3:2 aspect ratio (1200/800 = 1.5 → 66.67%) */
+        }
+        .tableauPlaceholder object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .insight-image {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .insight-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .insight-image .caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.3rem;
         }
     </style>
 </head>
@@ -97,14 +157,37 @@
                     <p class="subtitle">Interactive dashboard for strategic financial and operational performance monitoring</p>
                 </div>
 
+                <!-- KPIs Grid -->
+                <div class="section-block">
+                    <h3>📊 Key Performance Indicators</h3>
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="value">$29.36M</div>
+                            <div class="label">Total Sales</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="value">41.15%</div>
+                            <div class="label">Gross Margin</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="value">60,398</div>
+                            <div class="label">Total Orders</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="value">18,484</div>
+                            <div class="label">Total Customers</div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Context / Business Problem -->
                 <div class="section-block">
                     <h3>📌 Context</h3>
                     <p>
-                        The senior leadership of a multinational company needed a centralized tool to monitor the financial and operational performance of its various business units. Monthly Excel reports were tedious to update, did not allow filtering by region or product, and made it difficult to detect deviations early. An <strong>executive dashboard</strong> was required to consolidate key KPIs, enable variance analysis (YoY, MoM), and facilitate rapid decision-making.
+                        The senior leadership of AdventureWorks Cycles, a multinational bicycle manufacturer, needed a centralized tool to monitor financial and operational performance. Monthly Excel reports were tedious to update, did not allow filtering by region or product, and made it difficult to detect deviations early. An <strong>executive dashboard</strong> was required to consolidate key KPIs, enable variance analysis (YoY, MoM), and facilitate rapid decision-making.
                     </p>
                     <div class="highlight-box">
-                        <strong>Business questions:</strong> How is gross margin evolving by business unit? Which regions are underperforming against budget? Which products have the highest profitability and volume?
+                        <strong>Business questions:</strong> How is gross margin evolving by region? Which products have the highest profitability? Which countries are outperforming or underperforming?
                     </div>
                 </div>
 
@@ -113,72 +196,115 @@
                     <h3>🎯 Objective</h3>
                     <ul>
                         <li>Design an interactive dashboard in <strong>Tableau</strong> that consolidates financial and operational data.</li>
-                        <li>Enable variance analysis (month-over-month, year-over-year) with segmentation by region, product, and channel.</li>
+                        <li>Enable variance analysis (month-over-month, year-over-year) with segmentation by region, product, and customer.</li>
                         <li>Visualize trends in revenue, costs, margin, and profitability.</li>
-                        <li>Facilitate effective communication of results to the board of directors.</li>
+                        <li>Facilitate effective communication of results to the executive team.</li>
                     </ul>
                 </div>
 
-                <!-- Methodology (dashboard design) -->
+                <!-- Methodology -->
                 <div class="section-block">
                     <h3>🛠️ Methodology</h3>
                     <div class="grid-2col">
                         <div>
-                            <h4>Design & Data</h4>
+                            <h4>Data Engineering</h4>
                             <ul>
-                                <li>Extraction and consolidation of data from multiple sources (ERP, CRM, spreadsheets).</li>
-                                <li>Definition of strategic KPIs: Revenue, Gross Margin, EBITDA, ROI, Inventory Turnover.</li>
-                                <li>Preparation of a data model in <strong>Tableau</strong> with joins and calculated fields.</li>
+                                <li>Extracted data from <strong>SQL Server</strong> using Docker containers on macOS.</li>
+                                <li>Built <strong>SQL views</strong> to create a flat, denormalized table with all relevant dimensions.</li>
+                                <li>Designed a <strong>star schema</strong> model for optimal Tableau performance.</li>
                             </ul>
                         </div>
                         <div>
                             <h4>Visualization & Interaction</h4>
                             <ul>
-                                <li>Creation of dashboards with line charts, bar charts, maps, and detail tables.</li>
-                                <li>Implementation of dynamic filters for region, product, period, and business unit.</li>
-                                <li>Incorporation of storytelling: titles, annotations, and highlights of significant variances.</li>
+                                <li>Created KPI cards, bar charts, line charts, and heatmaps.</li>
+                                <li>Implemented dynamic filters for year, region, and product category.</li>
+                                <li>Incorporated storytelling: titles, annotations, and color-coded insights.</li>
                             </ul>
                         </div>
                     </div>
-                    <p style="margin-top:1rem;">
-                        <strong>Key result:</strong> The dashboard reduced report generation time from <strong>3 days to 30 minutes</strong>, and allowed executives to identify a margin decline in the northern region <strong>2 months before</strong> it impacted annual results.
-                    </p>
                 </div>
 
-                <!-- Business Insights (dashboard findings) -->
-                <div class="section-block">
-                    <h3>💡 Business Insights</h3>
-                    <div class="grid-2col">
-                        <div class="highlight-box">
-                            <h4>Northern region margin</h4>
-                            <p>Gross margin fell <strong>8%</strong> in the last 3 months due to an unexpected increase in logistics costs.</p>
-                        </div>
-                        <div class="highlight-box">
-                            <h4>Star products</h4>
-                            <p>20% of products generate <strong>75% of total margin</strong>, concentrating commercial effort on these lines.</p>
-                        </div>
-                        <div class="highlight-box">
-                            <h4>Sales seasonality</h4>
-                            <p>Online channel sales grow <strong>30%</strong> during Q4, while the physical channel remains stable.</p>
-                        </div>
-                        <div class="highlight-box">
-                            <h4>ROI by unit</h4>
-                            <p>The electronics business unit has the highest ROI (<strong>25%</strong>), while furniture is below 10%.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dashboard -->
+                <!-- Dashboard Container with "cajita" style -->
                 <div class="section-block">
                     <h3>📊 Interactive Dashboard</h3>
                     <p>
-                        The dashboard was developed in <strong>Tableau</strong> and allows executives to explore financial performance at global, regional, and product levels. It includes executive summary views, variance analysis, and transactional details on demand.
+                        The dashboard allows executives to explore financial performance at global, regional, and product levels. It includes KPI summaries, trend analysis, and detailed breakdowns.
                     </p>
-                    <div class="dashboard-placeholder">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <p><strong>Dashboard preview</strong><br />
-                        (Dashboard image or embed will go here)</p>
-                        <p style="font-size:0.8rem; margin-top:0.5rem;">Coming soon: Tableau Public link</p>
+
+                    <!-- Dashboard Container (cajita gris) -->
+                    <div class="dashboard-container">
+                        <div class='tableauPlaceholder' id='viz1784706269553' style='position: relative'>
+                            <noscript>
+                                <a href='#'>
+                                    <img alt='Global Sales &amp; Profitability Dashboard' src='https://public.tableau.com/static/images/Gl/GlobalSalesProfitabilityDashboard_17847025630140/Dashboard1/1_rss.png' style='border: none' />
+                                </a>
+                            </noscript>
+                            <object class='tableauViz' style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                                <param name='embed_code_version' value='3' />
+                                <param name='site_root' value='' />
+                                <param name='name' value='GlobalSalesProfitabilityDashboard_17847025630140&#47;Dashboard1' />
+                                <param name='tabs' value='no' />
+                                <param name='toolbar' value='yes' />
+                                <param name='static_image' value='https://public.tableau.com/static/images/Gl/GlobalSalesProfitabilityDashboard_17847025630140/Dashboard1/1.png' />
+                                <param name='animate_transition' value='yes' />
+                                <param name='display_static_image' value='yes' />
+                                <param name='display_spinner' value='yes' />
+                                <param name='display_overlay' value='yes' />
+                                <param name='display_count' value='yes' />
+                                <param name='language' value='en-US' />
+                            </object>
+                        </div>
+                        <script type='text/javascript'>
+                            var divElement = document.getElementById('viz1784706269553');
+                            var vizElement = divElement.getElementsByTagName('object')[0];
+                            // Set dimensions based on container width
+                            if (divElement.offsetWidth > 800) {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = (divElement.offsetWidth * 0.6667) + 'px';
+                            } else if (divElement.offsetWidth > 500) {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = (divElement.offsetWidth * 0.6667) + 'px';
+                            } else {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = '1427px'; // Fallback for small screens
+                            }
+                            var scriptElement = document.createElement('script');
+                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                        </script>
+                    </div>
+                    <!-- Fin del contenedor -->
+
+                    <p style="font-size:0.85rem; color:#888; text-align:center; margin-top:0.5rem;">
+                        Source: AdventureWorksDW (Internet Sales 2011-2014) · Processed with SQL Server
+                    </p>
+                    <p style="font-size:0.9rem; color:#666; text-align:center;">
+                        <a href="https://public.tableau.com/app/profile/alexis.sanchez8689/viz/GlobalSalesProfitabilityDashboard_17847025630140/Dashboard1" target="_blank">🔗 View Full Dashboard on Tableau Public</a>
+                    </p>
+                </div>
+
+                <!-- Business Insights -->
+                <div class="section-block">
+                    <h3>💡 Business Insights</h3>
+                    <div class="insight-grid">
+                        <div class="highlight-box">
+                            <h4>🇦🇺 Australia is the #1 Market</h4>
+                            <p>Generates <strong>$9.06M</strong> in revenue, significantly outperforming all other countries.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>🚲 Bikes Dominate Revenue</h4>
+                            <p><strong>80% of total sales</strong> come from Road, Mountain, and Touring Bikes.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>📈 Healthy Margins</h4>
+                            <p>Overall gross margin is <strong>41.15%</strong>, indicating strong product profitability.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>🇬🇧 UK Underperformance</h4>
+                            <p>United Kingdom generates only <strong>$3.39M</strong>, lagging behind Australia and Germany.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -186,37 +312,54 @@
                 <div class="section-block">
                     <h3>📌 Executive Recommendations</h3>
                     <ul>
-                        <li><strong>Review logistics costs in the northern region:</strong> Renegotiate supplier contracts or seek alternative transportation to recover margin.</li>
-                        <li><strong>Focus investment on high-margin products:</strong> Increase marketing and promotion budgets for the most profitable lines.</li>
-                        <li><strong>Strengthen the online channel:</strong> Leverage Q4 seasonality with specific campaigns for the digital channel.</li>
-                        <li><strong>Evaluate furniture business unit viability:</strong> Analyze whether to restructure or discontinue low-ROI lines.</li>
+                        <li><strong>Invest in Australia:</strong> Double down on marketing and sales resources in the top-performing market.</li>
+                        <li><strong>Investigate UK Strategy:</strong> Analyze sales team performance, pricing, and marketing in the UK to identify improvement areas.</li>
+                        <li><strong>Focus on Accessories:</strong> Bundle accessories with bikes to increase average order value and profit margins.</li>
+                        <li><strong>Maintain Strong Inventory:</strong> Ensure high stock levels for Road and Mountain Bikes to meet demand.</li>
                     </ul>
                     <div class="highlight-box" style="margin-top:1rem;">
-                        <strong>Estimated impact:</strong> Implementation of the dashboard and derived actions resulted in a <strong>5% improvement in gross margin</strong> the following year, equivalent to <strong>$2.5M USD</strong> in additional value.
+                        <strong>Estimated impact:</strong> Implementation of these recommendations could increase overall revenue by <strong>8-12%</strong> and improve gross margin to <strong>43%</strong> in the next fiscal year.
                     </div>
                 </div>
 
-                <!-- Technologies Used -->
+                <!-- Excel Section -->
+                <div class="section-block">
+                    <h3>📋 KPI Dictionary (Excel)</h3>
+                    <p>
+                        A comprehensive <strong>KPI Dictionary</strong> was created in Excel to document all metrics, definitions, formulas, and business context. This serves as a reference for stakeholders and ensures consistency across the organization.
+                    </p>
+                    <ul>
+                        <li><strong>File:</strong> <code>executive_kpi_dictionary.xlsx</code></li>
+                        <li><strong>Includes:</strong> KPI definitions, SQL formulas, Tableau calculations, units, and business targets.</li>
+                        <li><strong>Purpose:</strong> Aligns the organization on a single source of truth for key metrics.</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top:1rem;">
+                        <strong>📎 Download:</strong> <a href="https://github.com/JesusSanchezM/4.-Executive-BI-Dashboard/blob/main/excel/executive_kpi_dictionary.xlsx" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
                 <div class="section-block">
                     <h3>⚙️ Technologies</h3>
                     <p>
-                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Tableau Public</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Docker</span>
                         <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">DAX</span>
-                        <span class="tech-tag">Data Blending</span>
+                        <span class="tech-tag">VS Code</span>
                         <span class="tech-tag">Git</span>
+                        <span class="tech-tag">GitHub</span>
+                        <span class="tech-tag">ODBC</span>
                     </p>
                 </div>
 
                 <!-- GitHub Link -->
                 <div class="section-block" style="text-align:center; margin: 3rem 0;">
                     <ul class="actions fit">
-                        <li><a href="https://github.com/JesusSanchezM/4.-Executive-BI-Dashboard" target="_blank" class="button primary icon brands fa-github">View full project on GitHub</a></li>
+                        <li><a href="https://github.com/JesusSanchezM/4.-Executive-BI-Dashboard" target="_blank" class="button primary icon brands fa-github">View Full Project on GitHub</a></li>
                     </ul>
                     <p style="font-size:0.9rem; color:#666;">
-                        Repository with sample data, Tableau workbook, and design documentation.
+                        Repository with SQL scripts, Tableau workbook, KPI dictionary, and documentation.
                     </p>
                 </div>
 
